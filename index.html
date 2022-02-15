@@ -16,13 +16,38 @@
 </head>
 
 <body>
+  <header class="sp-header">
+    <div class="inner flex">
+      <h2 class="sp-site-title">Yuta Kobayashi's<br>Portfolio</h2>
+  
+      <div class="burger" id="show">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+    </div>
+
+    <nav class="sp-nav" id="nav">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#works">WORKS</a></li>
+        <li><a href="#skill">SKILLS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#profile">PROFILE</a></li>
+        <li><a href="404.html">BLOG</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- /sp-header -->
+
   <div class="mv">
     <h1 class="site-title">Yuta Kobayashi's Portfolio</h1>
   </div>
 
   <div class="container">
     <header>
-      <h2 class="site-title">Yuta Kobayashi's Portfolio</h2>
+      <!-- <h2 class="site-title">Yuta Kobayashi's Portfolio</h2>
 
       <nav class="fixed-nav">
         <ul>
@@ -33,62 +58,73 @@
           <li><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="#profile">PROFILE</a></li>
           <li><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="404.html">BLOG</a></li>
         </ul>
-      </nav>
+      </nav> -->
     </header>
 
     <div class="main-contents">
       <section class="works">
-        <h2 class="section-heading"><span class="jp-title">制作物</span>WORKS</h2>
+        <div class="inner">
+          <h2 class="section-heading"><span class="jp-title">制作物</span>WORKS</h2>
 
-        <h3 class="works-sub-title">架空案件</h3>
-        <p class="works-text">架空の案件を想定して作成したサイトです。</p>
-        <a href="#" class="btn">制作物一覧へ</a>
+          <h3 class="works-sub-title">架空案件</h3>
+          <p class="works-text">架空の案件を想定して作成したサイトです。</p>
+          <a href="#" class="btn">制作物一覧へ</a>
+  
+          <h3 class="works-sub-title">練習用コーディング</h3>
+          <p class="works-text">コーディングの練習で作成したサイトです。</p>
+  
+          <h3 class="works-sub-title">学習ブログ</h3>
+          <p class="works-text">学習のアウトプットのためにブログを書いています。</p>
+        </div>
+        <!-- /inner -->
 
-        <h3 class="works-sub-title">練習用コーディング</h3>
-        <p class="works-text">コーディングの練習で作成したサイトです。</p>
-
-        <h3 class="works-sub-title">学習ブログ</h3>
-        <p class="works-text">学習のアウトプットのためにブログを書いています。</p>
         
       </section>
       <!-- /works -->
   
       <section class="skills">
-        <h2 class="section-heading"><span class="jp-title">できること</span>SKILLS</h2>
-        <div class="skill-content-wrapper">
-          <ul class="skill-contents">
-            <li class="skill-image"><img src="" alt="Webデザイン"></li>
-            <li class="skill-title">Webデザイン</li>
-            <li class="skill-text">サイトの設計、デザインを作成し、それをもとにWebサイトの製作ができます。またタブレットやスマートフォンに対応させたレスポンシブデザインもできます。</li>
-          </ul>
-          <!-- /skill-contents -->
+        <div class="inner">
+          <h2 class="section-heading"><span class="jp-title">できること</span>SKILLS</h2>
 
-          <ul class="skill-contents">
-            <li class="skill-image"><img src="" alt="コーディング"></li>
-            <li class="skill-title">コーディング</li>
-            <li class="skill-text">ワイヤーフレームをもとに忠実に再現をし、様々な動きやエフェクトをつけることができます。またメンテナンスがしやすく見やすいコードを書くように努めています。</li>
-          </ul>
-          <!-- /skill-contents -->
-
-          <ul class="skill-contents">
-            <li class="skill-image"><img src="" alt="CMS化"></li>
-            <li class="skill-title">CMS化</li>
-            <li class="skill-text">Word Pressなどに代表されるものでHTMLとCSSで作成されたサイトを自身で容易に管理、更新ができるようなサイトに変更することができます。</li>
-          </ul>
-          <!-- /skill-contents -->
-
-          <a href="#" class="btn">プロフィールへ</a>
-
+          <div class="skill-content-wrapper">
+            <ul class="skill-contents">
+              <li class="skill-image"><img src="" alt="Webデザイン"></li>
+              <li class="skill-title">Webデザイン</li>
+              <li class="skill-text">サイトの設計、デザインを作成し、それをもとにWebサイトの製作ができます。またタブレットやスマートフォンに対応させたレスポンシブデザインもできます。</li>
+            </ul>
+            <!-- /skill-contents -->
+  
+            <ul class="skill-contents">
+              <li class="skill-image"><img src="" alt="コーディング"></li>
+              <li class="skill-title">コーディング</li>
+              <li class="skill-text">ワイヤーフレームをもとに忠実に再現をし、様々な動きやエフェクトをつけることができます。またメンテナンスがしやすく見やすいコードを書くように努めています。</li>
+            </ul>
+            <!-- /skill-contents -->
+  
+            <ul class="skill-contents">
+              <li class="skill-image"><img src="" alt="CMS化"></li>
+              <li class="skill-title">CMS化</li>
+              <li class="skill-text">Word Pressなどに代表されるものでHTMLとCSSで作成されたサイトを自身で容易に管理、更新ができるようなサイトに変更することができます。</li>
+            </ul>
+            <!-- /skill-contents -->
+  
+            <a href="#" class="btn">プロフィールへ</a>
+  
+          </div>
+          <!-- /skill-content-wrapper -->
         </div>
-        <!-- /skill-content-wrapper -->
+        <!-- /inner -->
   
       </section>
       <!-- /skills -->
   
       <section class="contact">
-        <h2 class="section-heading"><span class="jp-title">お問い合わせ</span>CONTACT</h2>
-        <p class="contact-text">お忙しい中ご覧いただきありがとうございます。<br>お仕事の話はもちろん、サイトの感想など何でもお聞かせください。</p>
-        <a href="#" class="btn">お問い合わせへ</a>
+        <div class="inner">
+          <h2 class="section-heading"><span class="jp-title">お問い合わせ</span>CONTACT</h2>
+          <p class="contact-text">お忙しい中ご覧いただきありがとうございます。<br>お仕事の話はもちろん、サイトの感想など何でもお聞かせください。</p>
+          <a href="#" class="btn">お問い合わせへ</a>
+        </div>
+        <!-- /inner -->
   
       </section>
       <!-- /contact -->
