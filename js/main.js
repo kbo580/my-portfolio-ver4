@@ -24,7 +24,7 @@ $(function(){
   });
 
   //pc用カーソル
-  $('.pc-nav .nav-list a').hover(function(){
+  $('.pc-nav .nav-link a').hover(function(){
     $(this).prev().css('opacity', '1');
   
   }, function(){
