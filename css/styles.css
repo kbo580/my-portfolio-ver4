@@ -60,11 +60,6 @@ body {
   position: relative;
 }
 
-.mv {
-  height: 400px;
-  background-color: #ddd;
-}
-
 .main-contents {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,10 +69,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-}
-
-header {
-  background-color: #959595;
 }
 
 section {
@@ -93,6 +84,22 @@ footer {
   margin-top: auto;
 }
 
+@media (min-width: 1000px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .pc-header {
+    width: 300px;
+  }
+  .main-contents {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
 /* -------------------------------------------- */
 /* パーツ */
 /* -------------------------------------------- */
@@ -105,18 +112,19 @@ section::before {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
 }
 
 .section-heading {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.1em;
   line-height: 1;
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom: 100px;
 }
 
 .jp-title {
-  font-size: 20px;
+  font-size: 16px;
   display: block;
 }
 
@@ -165,43 +173,40 @@ section::before {
     font-size: 80px;
     margin-bottom: 100px;
   }
+  .jp-title {
+    font-size: 20px;
+  }
 }
 
 /* -------------------------------------------- */
 /* header */
 /* -------------------------------------------- */
+/* sp用header */
 .sp-header {
   background-color: #E5E5E5;
   position: fixed;
   width: 100%;
   z-index: 1;
+  height: 60px;
+  padding: 9px 0;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
 
-.sp-site-title {
+/* header内のサイトタイトル */
+.header-site-title {
   font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* ナビメニュー */
-.sp-nav {
-  background-color: #e0b2ba;
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  text-align: center;
-  left: -150%;
-  -webkit-transition: .5s;
-  transition: .5s;
-  overflow-y: scroll;
-  z-index: 1;
-}
-
-/* bodyにactiveクラスが着いた時 */
 /* ハンバーガーメニュー */
 .burger {
   width: 30px;
   height: 30px;
   position: relative;
+  position: fixed;
+  top: 2%;
+  right: 4%;
   cursor: pointer;
   z-index: 2;
 }
@@ -248,28 +253,115 @@ section::before {
   left: 10%;
 }
 
+/* bodyにactiveクラスが着いた時 */
+body.active {
+  overflow-y: hidden;
+}
+
+.bar.colorChange {
+  background-color: #ffffff;
+}
+
 /* ナビメニューにactiveクラスが着いた時 */
 #nav.active {
   left: 0;
 }
 
-/*-------------------------------------------- */
-/* 共通設定 */
-/* -------------------------------------------- */
+/* pc用header */
+.pc-header {
+  display: none;
+}
+
 @media (min-width: 1000px) {
-  .container {
+  /* sp用header */
+  .sp-header {
+    display: none;
+  }
+  /* pc用header */
+  .pc-header {
+    display: block;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #a7a7f6;
+    padding-top: 90px;
     height: 100vh;
-    width: 300px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
   }
-  .main-contents {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+  /* header内のサイトタイトル */
+  .header-site-title {
+    font-size: 18px;
+    margin-bottom: 70px;
   }
 }
+
+/* -------------------------------------------- */
+/* ナビメニュー関連 */
+/* -------------------------------------------- */
+/* スマホのナビメニュー */
+.sp-nav {
+  background-color: #e0b2ba;
+  width: 80%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  overflow-y: scroll;
+  z-index: 1;
+}
+
+.sp-nav-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.nav-list {
+  font-weight: bold;
+  padding: 1em;
+}
+
+/* スクリーン */
+#screen {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@media (min-width: 1000px) {
+  .cursor {
+    opacity: 0;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    margin-right: 5px;
+  }
+}
+
+/*-------------------------------------------- */
+/* メインビジュアル */
+/* -------------------------------------------- */
+.mv {
+  padding-top: 60px;
+  background-color: #ddd;
+}
+
+/*-------------------------------------------- */
+/* 共通設定 */
+/* -------------------------------------------- */
 /*# sourceMappingURL=styles.css.map */
