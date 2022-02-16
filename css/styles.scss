@@ -67,8 +67,8 @@ body{
 }
 
 section{
-  // border: 1px solid #000;
-  padding: 80px 0 100px;
+  border: 1px solid #000;
+  padding: 60px 0;
   position: relative; 
 }
 
@@ -84,14 +84,14 @@ footer{
   .container{
     display: flex;
   }
-
-  .pc-header{
-    // height: 100vh;
-    width: 300px;
-  }
   
   .main-contents{
     flex: 1;
+  }
+
+  section{
+    padding: 80px 0 100px;
+    position: relative; 
   }
 }
 
@@ -272,14 +272,14 @@ body.active{
     display: none;
   }
   
-  /* pc用header */
+  /* pc用のheader */
   .pc-header{
-    display: block;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(167, 167, 246);
     padding-top: 90px;
+    width: 300px;
 
     height: 100vh;
     position: -webkit-sticky;
@@ -297,14 +297,14 @@ body.active{
 /* -------------------------------------------- */
 /* ナビメニュー関連 */
 /* -------------------------------------------- */
-/* スマホのナビメニュー */
+/* スマホのナビメニュー全体 */
 .sp-nav{
   background-color: rgb(224, 178, 186);
   width: 80%;
   height: 100vh;
   position: fixed;
   top: 0;
-  // left: -150%;
+  left: -150%;
   transition: .5s;
   overflow-y: scroll;
   z-index: 1;
@@ -317,16 +317,11 @@ body.active{
   transform: translate(-50%, -50%);
 }
 
-.nav-list{
+/* ナビのリンク */
+.nav-link{
   font-weight: bold;
   padding: 1em;
-  // border: 1px solid #000;
-
-}
-
-.sp-nav-list{
-  // padding: 1em;
-  // margin-bottom: 40px;
+  margin-bottom: 8px;
 }
 
 /* スクリーン */
@@ -341,11 +336,6 @@ body.active{
 }
 
 @media (min-width: 1000px){
-  .pc-nav{
-    // display: flex;
-    // justify-content: center;
-  }
-
   .cursor{
     opacity: 0;
     transition: all .4s;
