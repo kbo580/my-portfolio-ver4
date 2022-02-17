@@ -421,7 +421,6 @@ body.active {
 .works-item-wrapper {
   background-color: rgba(224, 75, 75, 0.3);
   border: 1px solid #000;
-  margin-bottom: 60px;
 }
 
 .works-text {
@@ -473,16 +472,23 @@ body.active {
   .st-inner {
     max-width: 800px;
     margin: 0 auto;
+    height: 365px;
   }
   .works-text-wrapper {
     position: absolute;
     max-width: 480px;
     left: 0;
+    height: 100%;
   }
   .works-image-wrapper {
     position: absolute;
     max-width: 480px;
-    height: 400px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 }
 
