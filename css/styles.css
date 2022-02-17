@@ -36,9 +36,9 @@ img {
 /* -------------------------------------------- */
 .inner {
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1200px;
   width: 100%;
-  padding: 0 15px;
+  padding: 0 4%;
 }
 
 .flex {
@@ -118,10 +118,16 @@ footer {
   display: inline-block;
 }
 
-/* sectionのサブタイトル */
+/* sectionタイトルの日本語タイトル */
 .jp-title {
   font-size: 16px;
   display: block;
+}
+
+/* セクションのサブタイトル */
+.sub-title {
+  font-weight: bold;
+  font-size: 20px;
 }
 
 /* sectionの背景 */
@@ -188,6 +194,9 @@ section::before {
   }
   .jp-title {
     font-size: 20px;
+  }
+  .sub-title {
+    font-size: 28px;
   }
   section::before {
     height: 140px;
@@ -403,6 +412,48 @@ body.active {
 .section-heading__rev {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+.skill-content-wrapper {
+  margin-bottom: 100px;
+}
+
+/* 個々のスキル */
+.skill-contents:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.skill-list:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+/* 画像 */
+.skill-image-wrapper {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.skill-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 1000px) {
+  /* スキルのコンテンツを横並び */
+  .skill-content-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  .skill-contents {
+    width: 30%;
+  }
 }
 
 /*-------------------------------------------- */
