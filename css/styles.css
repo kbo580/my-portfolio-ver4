@@ -58,6 +58,7 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
   letter-spacing: 0.15em;
   position: relative;
+  font-size: 14px;
 }
 
 .main-contents {
@@ -72,7 +73,6 @@ body {
 }
 
 section {
-  border: 1px solid #000;
   padding: 40px 0 80px;
   position: relative;
 }
@@ -96,6 +96,9 @@ footer {
         -ms-flex: 1;
             flex: 1;
   }
+  body {
+    font-size: 16px;
+  }
   section {
     padding: 80px 0 100px;
     position: relative;
@@ -105,6 +108,23 @@ footer {
 /* -------------------------------------------- */
 /* パーツ */
 /* -------------------------------------------- */
+/* sectionのタイトル */
+.section-heading {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  font-size: 40px;
+  margin-bottom: 60px;
+  display: inline-block;
+}
+
+/* sectionのサブタイトル */
+.jp-title {
+  font-size: 16px;
+  display: block;
+}
+
+/* sectionの背景 */
 section::before {
   content: "";
   width: 100%;
@@ -117,20 +137,11 @@ section::before {
   z-index: -1;
 }
 
-.section-heading {
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 0.1em;
-  line-height: 1;
-  font-size: 40px;
-  margin-bottom: 60px;
-}
-
-.jp-title {
-  font-size: 16px;
-  display: block;
-}
-
 /* ボタン */
+.btn-wrapper {
+  text-align: center;
+}
+
 .btn {
   min-width: 200px;
   text-align: center;
@@ -338,7 +349,10 @@ body.active {
 .nav-link {
   font-weight: bold;
   padding: 1em;
-  margin-bottom: 8px;
+}
+
+.nav-link:first-child {
+  padding-top: 0;
 }
 
 /* スクリーン */
@@ -370,8 +384,46 @@ body.active {
 }
 
 /*-------------------------------------------- */
-/* 共通設定 */
+/* works */
 /* -------------------------------------------- */
+/*-------------------------------------------- */
+/* skills */
+/* -------------------------------------------- */
+/* sectionのタイトルを右よせ */
+.rev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section-heading__rev {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+/*-------------------------------------------- */
+/* contact */
+/* -------------------------------------------- */
+.contact .section-heading {
+  margin-bottom: 40px;
+}
+
+.contact-text {
+  max-width: 575px;
+  width: 100%;
+  margin: 0 auto 60px;
+}
+
+@media (min-width: 1000px) {
+  .contact .section-heading {
+    margin-bottom: 60px;
+  }
+}
+
 /*-------------------------------------------- */
 /* 共通設定 */
 /* -------------------------------------------- */
