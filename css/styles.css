@@ -394,20 +394,19 @@ body.active {
 /* メインビジュアル */
 /* -------------------------------------------- */
 .mv {
-  padding-top: 60px;
   height: 100vh;
-  background-color: #ddd;
+  background: url("../images/AdobeStock_372717887.jpeg") center/cover no-repeat;
 }
 
 /*-------------------------------------------- */
 /* works */
 /* -------------------------------------------- */
-.works__item-wrapper:not(:last-child) {
-  margin-bottom: 60px;
+.works__item-wrapper--text-align {
+  text-align: center;
 }
 
-.works__item-wrapper:not(:last-child)--text-align {
-  text-align: center;
+.works__item-wrapper:not(:last-child) {
+  margin-bottom: 60px;
 }
 
 .works__sub-title {

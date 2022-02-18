@@ -379,9 +379,9 @@ body.active{
 /* メインビジュアル */
 /* -------------------------------------------- */
 .mv{
-  padding-top: 60px;
+  // padding-top: 60px;
   height: 100vh;
-  background-color: #ddd;
+  background: url('../images/AdobeStock_372717887.jpeg') center / cover no-repeat;
 }
 @media (min-width: 1000px){
   
@@ -391,12 +391,14 @@ body.active{
 /* works */
 /* -------------------------------------------- */
 .works{
-  &__item-wrapper:not(:last-child){
-    margin-bottom: 60px;
-    
+  &__item-wrapper{
     &--text-align{
       text-align: center;
     }
+  }
+
+  &__item-wrapper:not(:last-child){
+    margin-bottom: 60px;
   }
 
   &__sub-title{
