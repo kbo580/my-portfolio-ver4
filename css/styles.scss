@@ -65,10 +65,11 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%
 }
 
 section{
-  // border: 1px solid #000;
+  border: 1px solid #000;
   padding: 40px 0 80px;
   position: relative; 
 }
@@ -93,7 +94,10 @@ footer{
   }
   
   .main-contents{
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: calc(100% - 300px);
   }
 
   body{
@@ -164,7 +168,8 @@ section::before{
   line-height: 1;
 }
 
-.btn::before{
+.btn::before,
+.works__more-btn::before{
   content: "\f0da";
   font-weight: 900;
   font-family: 'Font Awesome 5 Free';
@@ -306,7 +311,7 @@ body.active{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(167, 167, 246);
+    background-color: rgb(203, 203, 211);
     padding-top: 90px;
     width: 300px;
 
@@ -318,8 +323,9 @@ body.active{
 
   /* header内のサイトタイトル */
   .header-site-title{
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 70px;
+    padding: 0 20px;
 
     &--link{
       display: inline-block;
@@ -461,6 +467,12 @@ body.active{
     width: 100%;
   }
 
+  &__more-btn{
+    margin-top: 30px;
+    font-weight: bold;
+    display: inline-block;
+  }
+
   &__image-wrapper{
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -469,7 +481,7 @@ body.active{
   }
 }
 
-.st-inner{
+.works-sub-wrapper{
   width: 100%;
   position: relative;
 
@@ -537,6 +549,16 @@ body.active{
   text-align: right;
 }
 
+@media (min-width: 575px){
+  .works{
+    &__item{
+      // width: 49%;
+    }
+  }
+
+
+}
+
 @media (min-width: 1000px){
   .works{
     &__item-wrapper:not(:last-child){
@@ -556,29 +578,28 @@ body.active{
     }
     
     &__text-wrapper{
-      padding: 20px;
+      padding: 60px 30px;
       flex:1;
     }
     
     &__image-wrapper{
-      width: 60%;
+      width: 50%;
     }
     
     &__item-wrapper--rev{
       flex-direction: row-reverse;
     }
-
   }
   
-  .st-inner{
-    max-width: 900px;
-    margin: 0 auto 0px;
+  .works-sub-wrapper{
     padding: 50px 0;
     display: flex;
     align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
 
     &::after{
-      width: 60%;
+      width: 70%;
     }
   }
 

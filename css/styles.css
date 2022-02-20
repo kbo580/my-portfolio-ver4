@@ -70,9 +70,11 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
+  width: 100%;
 }
 
 section {
+  border: 1px solid #000;
   padding: 40px 0 80px;
   position: relative;
 }
@@ -99,9 +101,15 @@ footer {
     display: flex;
   }
   .main-contents {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 100vh;
+    width: calc(100% - 300px);
   }
   body {
     font-size: 16px;
@@ -168,7 +176,8 @@ section::before {
   line-height: 1;
 }
 
-.btn::before {
+.btn::before,
+.works__more-btn::before {
   content: "\f0da";
   font-weight: 900;
   font-family: 'Font Awesome 5 Free';
@@ -320,7 +329,7 @@ body.active {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: #a7a7f6;
+    background-color: #cbcbd3;
     padding-top: 90px;
     width: 300px;
     height: 100vh;
@@ -330,8 +339,9 @@ body.active {
   }
   /* header内のサイトタイトル */
   .header-site-title {
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 70px;
+    padding: 0 20px;
   }
   .header-site-title--link {
     display: inline-block;
@@ -474,18 +484,24 @@ body.active {
   width: 100%;
 }
 
+.works__more-btn {
+  margin-top: 30px;
+  font-weight: bold;
+  display: inline-block;
+}
+
 .works__image-wrapper {
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
 }
 
-.st-inner {
+.works-sub-wrapper {
   width: 100%;
   position: relative;
 }
 
-.st-inner::after {
+.works-sub-wrapper::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -562,13 +578,13 @@ body.active {
     width: 31%;
   }
   .works__text-wrapper {
-    padding: 20px;
+    padding: 60px 30px;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
   }
   .works__image-wrapper {
-    width: 60%;
+    width: 50%;
   }
   .works__item-wrapper--rev {
     -webkit-box-orient: horizontal;
@@ -576,9 +592,7 @@ body.active {
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
-  .st-inner {
-    max-width: 900px;
-    margin: 0 auto 0px;
+  .works-sub-wrapper {
     padding: 50px 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -586,9 +600,11 @@ body.active {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
   }
-  .st-inner::after {
-    width: 60%;
+  .works-sub-wrapper::after {
+    width: 70%;
   }
 }
 
