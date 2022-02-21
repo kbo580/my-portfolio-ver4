@@ -493,17 +493,16 @@ body.active {
 .works__item-image-wrapper {
   aspect-ratio: 4 / 3;
   width: 100%;
+  height: auto;
   overflow: hidden;
   margin-bottom: 12px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
 .works__item-image {
   -webkit-transition: all .6s;
   transition: all .6s;
-}
-
-.works__item-image:hover {
-  opacity: .6;
 }
 
 .works__text-wrapper {
@@ -591,6 +590,15 @@ body.active {
   position: absolute;
   bottom: 1%;
   text-align: right;
+}
+
+.blog-link {
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.blog-link:hover {
+  opacity: 0.8;
 }
 
 @media (min-width: 575px) {

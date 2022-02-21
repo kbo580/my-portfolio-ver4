@@ -475,15 +475,15 @@ body.active{
   &__item-image-wrapper{
     aspect-ratio: 4 / 3;
     width: 100%;
+    height: auto;
     overflow: hidden;
     margin-bottom: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   }
   
   &__item-image{
     transition: all .6s;
-    &:hover{
-      opacity: .6;
-    }
+
   }
 
   &__text-wrapper{
@@ -572,6 +572,13 @@ body.active{
 	position:absolute;
 	bottom:1%;
   text-align: right;
+}
+
+.blog-link{
+  transition: all .4s;
+  &:hover{
+    opacity: 0.8;
+  }
 }
 
 @media (min-width: 575px){
