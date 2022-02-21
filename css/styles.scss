@@ -34,6 +34,11 @@ img{
 /* -------------------------------------------- */
 /* 共通設定 */
 /* -------------------------------------------- */
+/* font-size */
+@function rem($px){
+  @return ($px/16) *1rem;
+}
+
 header,main,section,footer, div, ul, li, h1,h2,h3{
   // background-color: rgba(0,200,100,0.1);
   // border: 1px solid rgba(0,0,0,0.4);
@@ -58,7 +63,7 @@ body{
   font-family: 'Noto Sans JP', sans-serif;
   letter-spacing: 0.15em;
   position: relative;
-  font-size: 14px;
+  font-size: calc(0.875rem + ((1vw - 3.75px) * 0.32)); /* font-size:14px */
 }
 
 .main-contents{
@@ -69,23 +74,21 @@ body{
 }
 
 section{
-  // border: 1px solid #000;
-  padding: 40px 0 80px;
-  position: relative; 
-}
-
-footer{
-  background-color: #7B7A7A;
-  color: #ffffff;
-  height: 70px;
   width: 100%;
-  margin-top: auto;
+  padding: 30px 0 80px;
+  position: relative; 
 }
 
 .thumbnail{
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (min-width: 575px){
+  section{
+    padding: 90px 0 150px;
+  }
 }
 
 @media (min-width: 1000px){
@@ -101,13 +104,11 @@ footer{
   }
 
   body{
-    font-size: 16px;
+    font-size: rem(16);
   }
 
   section{
-    width: 100%;
     padding: 90px 0 150px;
-    position: relative; 
   }
 }
 
@@ -119,20 +120,20 @@ footer{
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.1em;
   line-height: 1;
-  font-size: 40px;
+  font-size: calc(2.5rem + ((1vw - 3.75px) * 8)); /* font-size: 40px */
   margin-bottom: 60px;
 }
 
 /* sectionタイトルの日本語タイトル */
 .jp-title{
-  font-size: 16px;
+  font-size: calc(1rem + ((1vw - 3.75px) * 0.64)); /* font-size: 16px */
   display: block;
 }
 
 /* セクションのサブタイトル */
 .sub-title{
   font-weight: bold;
-  font-size: 20px;
+  font-size: calc(1.25rem + ((1vw - 3.75px) * 1.28)); /* font-size: 20px */
 }
 
 /* sectionの背景 */
@@ -193,18 +194,24 @@ section::before{
   left: 0;
 }
 
+@media (min-width: 575px){
+  section::before{
+    height: 140px;
+  }
+
+}
 @media (min-width: 1000px){
   .section-heading{
-    font-size: 90px;
+    font-size: rem(90);
     margin-bottom: 90px;
   }
 
   .jp-title{
-    font-size: 20px;
+    font-size: rem(20);
   }
 
   .sub-title{
-    font-size: 28px;
+    font-size: rem(28);
   }
   
   section::before{
@@ -229,7 +236,7 @@ section::before{
 
 /* header内のサイトタイトル */
 .header-site-title{
-  font-size: 16px;
+  font-size: rem(16);
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -323,7 +330,7 @@ body.active{
 
   /* header内のサイトタイトル */
   .header-site-title{
-    font-size: 24px;
+    font-size: rem(24);
     margin-bottom: 70px;
     padding: 0 20px;
 
@@ -347,6 +354,7 @@ body.active{
   transition: .5s;
   overflow-y: scroll;
   z-index: 1;
+  font-size: rem(16);
 }
 
 .sp-nav-menu{
@@ -402,6 +410,7 @@ body.active{
 /* -------------------------------------------- */
 .works{
   &__item-wrapper{
+    width: 100%;
     &--text-align{
       text-align: center;
     }
@@ -437,6 +446,7 @@ body.active{
     justify-content: space-between;
     text-align: center;
     margin-bottom: 50px;
+    width: 100%;
   }
 
   &__item{
@@ -460,7 +470,6 @@ body.active{
 
   &__text-wrapper{
     position: relative;
-    // background-color: #fc2;
     padding: 40px 20px;
     display: inline-block;
     margin: 0 auto;
@@ -470,14 +479,12 @@ body.active{
   &__more-btn{
     margin-top: 30px;
     font-weight: bold;
-    display: inline-block;
   }
 
   &__image-wrapper{
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
-    // border: 1px solid #000;
   }
 }
 
@@ -552,10 +559,34 @@ body.active{
 @media (min-width: 575px){
   .works{
     &__item{
-      // width: 49%;
+      width: 31%;
+    }
+
+    &__text-wrapper{
+      padding: 60px 30px;
+      flex:1;
+    }
+    
+    &__image-wrapper{
+      width: 50%;
+    }
+    
+    &__item-wrapper--rev{
+      flex-direction: row-reverse;
     }
   }
 
+  .works-sub-wrapper{
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+
+    &::after{
+      width: 70%;
+    }
+  }
 
 }
 
@@ -576,31 +607,6 @@ body.active{
     &__item{
       width: 31%;
     }
-    
-    &__text-wrapper{
-      padding: 60px 30px;
-      flex:1;
-    }
-    
-    &__image-wrapper{
-      width: 50%;
-    }
-    
-    &__item-wrapper--rev{
-      flex-direction: row-reverse;
-    }
-  }
-  
-  .works-sub-wrapper{
-    padding: 50px 0;
-    display: flex;
-    align-items: center;
-    max-width: 900px;
-    margin: 0 auto;
-
-    &::after{
-      width: 70%;
-    }
   }
 
 }
@@ -608,6 +614,16 @@ body.active{
 /*-------------------------------------------- */
 /* skills */
 /* -------------------------------------------- */
+.skills{
+  &__item-wrapper{
+    margin-bottom: 100px;
+  }
+
+  &__item-lists{
+    margin-bottom: 60px;
+  }
+}
+
 /* sectionのタイトルを右よせ */
 .rev{
   display: flex;
@@ -618,52 +634,51 @@ body.active{
   align-self: flex-end;
 }
 
-.skill-content-wrapper{
-  margin-bottom: 100px;
+/* スキルのリスト */
+.skill-list{
+  &__image-wrapper{
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+
+  &__title{
+    margin-bottom: 16px;
+
+  }
+  
+  &__text{
+    
+  }
 }
 
-/* 個々のスキル */
-.skill-contents:not(:last-child){
-  margin-bottom: 60px;
-}
+@media (min-width: 575px){
+  .skills{
+    &__item-wrapper{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
 
-.skill-list:not(:last-child){
-  margin-bottom: 16px;
-}
-
-/* 画像 */
-.skill-image-wrapper{
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
+    &__item-lists{
+      width: 49%;
+    }
+  }
 }
 
 @media (min-width: 1000px){
-  /* スキルのコンテンツを横並び */
-  .skill-content-wrapper{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
+  .skills{
+    &__item-lists{
+      width: 30%;
+    }
   }
 
-  .skill-contents{
-    width: 30%;
-  }
-
-  
-  
 }
-
-
 
 /*-------------------------------------------- */
 /* contact */
 /* -------------------------------------------- */
-.contact{
-  .section-heading{
-    // margin-bottom: 40px;
-  }
-}
-
 .contact-text{
   max-width: 575px;
   width: 100%;
@@ -672,11 +687,6 @@ body.active{
 
 
 @media (min-width: 1000px){
-  .contact{
-    .section-heading{
-      // margin-bottom: 60px;
-    }
-  }
   
 }
 
@@ -687,11 +697,21 @@ footer{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  background-color: #7B7A7A;
+  color: #ffffff;
+  height: 70px;
+  width: 100%;
+  margin-top: auto;
 }
 
+.copy{
+  font-size: calc(0.75rem + ((1vw - 3.75px) * 0.32)); /*font-size: 14px */
+}
 
 @media (min-width: 1000px){
+  .copy{
+    font-size: rem(14);
+  }
   
 }
 /*-------------------------------------------- */
