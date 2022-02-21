@@ -11,7 +11,7 @@ $(function(){
     $('body').toggleClass('active');
   });
   
-  $('.sp-nav-list a').on('click', function () {
+  $('.sp-nav-menu a').on('click', function () {
       $('#show').removeClass('active');
       $('#nav').removeClass('active');
       $('.bar').removeClass('colorChange');
@@ -20,7 +20,7 @@ $(function(){
   });
 
   $('#screen').on('click', function(){
-    $('.sp-nav-list a').click();
+    $('.sp-nav-menu a').click();
   });
 
   //pc用カーソル
