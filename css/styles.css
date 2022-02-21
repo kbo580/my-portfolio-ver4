@@ -129,7 +129,7 @@ section {
   line-height: 1;
   font-size: calc(2.5rem + ((1vw - 3.75px) * 8));
   /* font-size: 40px */
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 /* sectionタイトルの日本語タイトル */
@@ -205,6 +205,9 @@ section::before {
 }
 
 @media (min-width: 575px) {
+  .section-heading {
+    margin-bottom: 90px;
+  }
   section::before {
     height: 140px;
   }
@@ -213,7 +216,6 @@ section::before {
 @media (min-width: 1000px) {
   .section-heading {
     font-size: 5.625rem;
-    margin-bottom: 90px;
   }
   .jp-title {
     font-size: 1.25rem;
@@ -236,7 +238,6 @@ section::before {
   width: 100%;
   z-index: 1;
   height: 60px;
-  padding: 9px 0;
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
@@ -318,6 +319,21 @@ body.active {
 /* pc用header */
 .pc-header {
   display: none;
+}
+
+@media (min-width: 575px) {
+  /* sp用header */
+  .sp-header {
+    height: 100px;
+  }
+  /* ハンバーガーメニュー */
+  .burger {
+    top: 4%;
+  }
+  /* header内のサイトタイトル */
+  .header-site-title {
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -631,7 +647,7 @@ body.active {
 /* skills */
 /* -------------------------------------------- */
 .skills__item-wrapper {
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 .skills__item-lists {

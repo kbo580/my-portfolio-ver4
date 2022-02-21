@@ -121,7 +121,7 @@ section{
   letter-spacing: 0.1em;
   line-height: 1;
   font-size: calc(2.5rem + ((1vw - 3.75px) * 8)); /* font-size: 40px */
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 /* sectionタイトルの日本語タイトル */
@@ -195,6 +195,10 @@ section::before{
 }
 
 @media (min-width: 575px){
+  .section-heading{
+    margin-bottom: 90px;
+  }
+
   section::before{
     height: 140px;
   }
@@ -203,7 +207,6 @@ section::before{
 @media (min-width: 1000px){
   .section-heading{
     font-size: rem(90);
-    margin-bottom: 90px;
   }
 
   .jp-title{
@@ -230,7 +233,6 @@ section::before{
   width: 100%;
   z-index: 1;
   height: 60px;
-  padding: 9px 0;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -307,6 +309,23 @@ body.active{
   display: none;
 }
 
+@media (min-width: 575px){
+  /* sp用header */
+  .sp-header{
+    height: 100px;
+  }
+
+  /* ハンバーガーメニュー */
+  .burger{
+    top: 4%;
+  }
+
+  /* header内のサイトタイトル */
+  .header-site-title{
+    font-size: rem(24);
+  }
+}
+
 @media (min-width: 1000px){
   /* sp用header */
   .sp-header{
@@ -321,7 +340,6 @@ body.active{
     background-color: rgb(203, 203, 211);
     padding-top: 90px;
     width: 300px;
-
     height: 100vh;
     position: -webkit-sticky;
     position: sticky;
@@ -616,7 +634,7 @@ body.active{
 /* -------------------------------------------- */
 .skills{
   &__item-wrapper{
-    margin-bottom: 100px;
+    margin-bottom: 20px;
   }
 
   &__item-lists{
