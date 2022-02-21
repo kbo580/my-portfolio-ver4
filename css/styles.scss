@@ -75,7 +75,7 @@ body{
 
 section{
   width: 100%;
-  padding: 30px 0 80px;
+  padding: 50px 0 80px;
   position: relative; 
 }
 
@@ -121,7 +121,7 @@ section{
   letter-spacing: 0.1em;
   line-height: 1;
   font-size: calc(2.5rem + ((1vw - 3.75px) * 8)); /* font-size: 40px */
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 /* sectionタイトルの日本語タイトル */
@@ -140,7 +140,7 @@ section{
 section::before{
   content: "";
   width: 100%;
-  height: 70px;
+  height: 90px;
   background-color: rgba(0, 0, 0, 0.2);
   display: block;
   position: absolute;
@@ -232,7 +232,7 @@ section::before{
   position: fixed;
   width: 100%;
   z-index: 1;
-  height: 60px;
+  height: 70px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
 
