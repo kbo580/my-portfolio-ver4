@@ -142,6 +142,23 @@ section{
 .sub-title{
   font-weight: bold;
   font-size: calc(1.25rem + ((1vw - 3.75px) * 1.28)); /* font-size: 20px */
+  margin-bottom: 20px;
+}
+
+/* 下線付きのサブタイトル */
+.sub-title--border{
+  position: relative;
+  border-bottom: 3px solid #000;
+  display: inline-block;
+
+  &::after{
+    position: absolute;
+    content: " ";
+    display: block;
+    border-bottom: solid 3px rgb(141, 141, 141);
+    bottom: -3px;
+    width: 30%;
+  }
 }
 
 /* sectionの背景 */
@@ -210,7 +227,7 @@ section{
 /* パンクズリスト */
 .breadcrumbs{
   color: #333;
-  padding: 0.5em 0;
+  padding: 1em 0;
   background-color: #ddd;
   margin-bottom: 30px;
 
@@ -248,6 +265,10 @@ section{
   .top-page-sec::before{
     height: 140px;
   }
+  /* パンクズリスト */
+  .breadcrumbs{
+    margin-bottom: 70px;
+  }
 
 }
 @media (min-width: 1000px){
@@ -261,6 +282,7 @@ section{
 
   .sub-title{
     font-size: rem(28);
+    margin-bottom: 20px;
   }
   
   .top-page-sec::before{
@@ -469,19 +491,19 @@ body.active{
   }
 
   &__sub-title{
-    position: relative;
-    border-bottom: 3px solid #000;
-    display: inline-block;
-    margin-bottom: 10px;
+    // position: relative;
+    // border-bottom: 3px solid #000;
+    // display: inline-block;
+    // margin-bottom: 10px;
   
-    &::after{
-      position: absolute;
-      content: " ";
-      display: block;
-      border-bottom: solid 3px rgb(141, 141, 141);
-      bottom: -3px;
-      width: 30%;
-    }
+    // &::after{
+    //   position: absolute;
+    //   content: " ";
+    //   display: block;
+    //   border-bottom: solid 3px rgb(141, 141, 141);
+    //   bottom: -3px;
+    //   width: 30%;
+    // }
   }
   
   &__text--mb{
@@ -652,7 +674,7 @@ body.active{
     }
 
     &__sub-title{
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
     }
 
     &__text--mb{
@@ -1075,6 +1097,10 @@ footer{
 
 @media (min-width: 1000px){
   
+}
+
+.aaa{
+  border: 1px solid #000;
 }
 /*-------------------------------------------- */
 /* 共通設定 */
