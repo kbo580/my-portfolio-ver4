@@ -71,11 +71,11 @@
         </div>
         <!-- /breadcrumbs -->
 
-        <div  class="profile__wrapper inner">
+        <div class="inner">
 
-          <div class="about__wrapper aaa">
+          <div class="about__wrapper profile-wrapper">
   
-            <h3 class="sub-title sub-title--border">About Me</h3>
+            <h3 class="sub-title sub-title--border profile-sub-title">About Me</h3>
             <h4 class="about__name">Kobayashi Yuta</h4>
   
             <ul class="about__text-lists">
@@ -92,8 +92,8 @@
           </div>
           <!-- /about__wrapper -->
 
-          <div class="career__wrapper aaa">
-            <h3 class="sub-title sub-title--border">Career</h3>
+          <div class="career__wrapper profile-wrapper">
+            <h3 class="sub-title sub-title--border profile-sub-title">Career</h3>
             
             <ul class="career__lists">
               <li class="career__list">
@@ -126,44 +126,47 @@
           </div>
           <!-- /career__wrapper -->
 
-          <div class="skills__wrapper aaa">
-            <h3 class="sub-title sub-title--border">SKILLS</h3>
-            
-            <ul class="skill-list">
-              <li class="skill-list__name"><span style="background-image: url(images/html&css-icon.png);"></span>HTML / CSS</li>
-              <li class="skill-list__explain">HTMLやCSSでのマークアップだけでなくSassを使用した記述も基本的な部分はできます。<br>またレスポンシブデザインへの対応も可能です。<br>エディターはVisual Studio Codeを使用しています。</li>
-            </ul>
+          <div class="skill-set__wrapper profile-wrapper">
+            <h3 class="sub-title sub-title--border profile-sub-title">SKILLS</h3>
+            <div class="skills-container flex">
+
+              <ul class="skill-set-list">
+                <li class="skill-set-list__name"><span style="background-image: url(images/html&css-icon.png);" class="skill-set-list__image"></span>HTML / CSS</li>
+                <li class="skill-set-list__explain">HTMLやCSSでのマークアップだけでなくSassを使用した記述も基本的な部分はできます。<br>またレスポンシブデザインへの対応も可能です。<br>エディターはVisual Studio Codeを使用しています。</li>
+              </ul>
+      
+              <ul class="skill-set-list">
+                <li class="skill-set-list__name"><span style="background-image: url(images/javascript_icon.png);" class="skill-set-list__image"></span>Java Script / jQuery</li>
+                <li class="skill-set-list__explain">基本的な文法は一通り学習しましたので簡単なJavaScriptやjQueryを扱いWebサイトに動きをつけることができます。<br>あまりにも複雑なものは調べながらやるので時間がかかるかもしれません。</li>
+              </ul>
+      
+              <ul class="skill-set-list">
+                <li class="skill-set-list__name"><span style="background-image: url(images/xd_icon.png);" class="skill-set-list__image"></span>Adobe XD</li>
+                <li class="skill-set-list__explain">自身のWebサイトを作成する場合はXDでワイヤーフレームを作成してコーディングをしていますので基本的な使用はできます。</li>
+              </ul>
+      
+              <ul class="skill-set-list">
+                <li class="skill-set-list__name"><span style="background-image: url(images/wordpress_icon.png);" class="skill-set-list__image"></span>Word Press</li>
+                <li class="skill-set-list__explain">HTMLで作成したサイトをWord Press化し、更新、管理がしやすいようにすることができます。<br>また個人的なブログもWord Pressで運営しておりますので記事の更新や仕様には慣れております。</li>
+              </ul>
     
-            <ul class="skill-list">
-              <li class="skill-list__name"><span style="background-image: url(images/javascript_icon.png);"></span>Java Script / jQuery</li>
-              <li class="skill-list__explain">基本的な文法は一通り学習しましたので簡単なJavaScriptやjQueryを扱いWebサイトに動きをつけることができます。<br>あまりにも複雑なものは調べながらやるので時間がかかるかもしれません。</li>
-            </ul>
+              <ul class="skill-set-list">
+                <li class="skill-set-list__name"><span style="background-image: url(/images/photoshop-icon.png);" class="skill-set-list__image"></span>Photoshop</li>
+                <li class="skill-set-list__explain">基本的な操作は一通りでき、画像の修正や編集、合成などができます。</li>
+              </ul>
     
-            <ul class="skill-list">
-              <li class="skill-list__name"><span style="background-image: url(images/xd_icon.png);"></span>Adobe XD</li>
-              <li class="skill-list__explain">自身のWebサイトを作成する場合はXDでワイヤーフレームを作成してコーディングをしていますので基本的な使用はできます。</li>
-            </ul>
-    
-            <ul class="skill-list">
-              <li class="skill-name"><span style="background-image: url(images/wordpress_icon.png);"></span>Word Press</li>
-              <li class="skill-list__explain">HTMLで作成したサイトをWord Press化し、更新、管理がしやすいようにすることができます。<br>また個人的なブログもWord Pressで運営しておりますので記事の更新や仕様には慣れております。</li>
-            </ul>
-  
-            <ul class="skill-list">
-              <li class="skill-list__name"><span style="background-image: url(/images/photoshop-icon.png);"></span>Photoshop</li>
-              <li class="skill-list__explain">基本的な操作は一通りでき、画像の修正や編集、合成などができます。</li>
-            </ul>
-  
-            <ul class="skill-list">
-              <li class="skill-list__name"><span style="background-image: url(/images/illustrator_icon.png);"></span>illustrator</li>
-              <li class="skill-list__explain">illustratorはまだまだ学習中ですが基本的な操作は可能です。</li>
-            </ul>
+              <ul class="skill-set-list">
+                <li class="skill-set-list__name"><span style="background-image: url(/images/illustrator_icon.png);" class="skill-set-list__image"></span>illustrator</li>
+                <li class="skill-set-list__explain">illustratorはまだまだ学習中ですが基本的な操作は可能です。</li>
+              </ul>
+            </div>
+            <!-- /skills-container -->
   
           </div>
-          <!-- /skills__wrapper -->
-          
+          <!-- /skill-set__wrapper -->
+
         </div>
-        <!-- /profile__wrapper -->
+        <!-- /profile-wrapper -->
         
       </section>
       <!-- /profile -->
