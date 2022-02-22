@@ -12,28 +12,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-
-
   <title>Yuta Kobayashi's Portfolio</title>
 </head>
 
 <body>
-  <header class="sp-header flex">
-    <div class="inner">
-      <h2 class="header-site-title"><a href="#" class="header-site-title--link">Yuta Kobayashi's<br>Portfolio</a></h2>
 
-      <div id="screen"></div>
-      <!-- /スクリーン -->
+  <div class="mv">
+    <h1 class="site-title">Yuta Kobayashi's Portfolio</h1>
+  </div>
 
-      <div class="burger" id="show">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-      <!-- /burger -->
-
-    </div>
-    <!-- /inner -->
+  <div class="container">
 
     <nav class="sp-nav" id="nav">
       <ul class="sp-nav-menu">
@@ -47,17 +35,18 @@
     </nav>
     <!-- /sp-nav -->
 
-  </header>
-  <!-- /sp-header -->
+    <div id="screen"></div>
+      <!-- /スクリーン -->
 
-  <div class="mv">
-    <h1 class="site-title">Yuta Kobayashi's Portfolio</h1>
-  </div>
+    <div class="burger" id="show">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <!-- /burger -->
 
-  <div class="container">
     <header class="pc-header">
       <h2 class="header-site-title"><a href="#" class="header-site-title--link">Yuta Kobayashi's<br> Portfolio</a></h2>
-
 
       <nav class="pc-nav">
         <ul class="pc-nav-menu">
@@ -75,9 +64,9 @@
 
     <div class="main-contents">
       
-      <section class="works">
+      <section class="works top-page-sec">
         <div class="inner">
-          <h2 class="section-heading"><span class="jp-title">制作物</span>WORKS</h2>
+          <h2 class="heading section-heading"><span class="jp-title">制作物</span>WORKS</h2>
 
           <div class="works__item-wrapper works__item-wrapper--text-align">
             <h3 class="works__sub-title sub-title">架空案件</h3>
@@ -86,7 +75,7 @@
             <ul class="works__item-list">
   
               <li class="works__item">
-                <a href="#">
+                <a href="single.html">
                   <figure class="works__item-image-wrapper">
                     <img src="images/clinic-top.png" alt=""  class="works__item-image thumbnail">
                   </figure>
@@ -132,7 +121,9 @@
               <h3 class="works__sub-title sub-title">練習用コーディング</h3>
               <p class="works__text">コーディングの練習で作成したサイトです。</p>
 
-              <div class="works__more-btn"><a href="#">もっとみる</a></div>
+              <div class="btn-wrapper btn-wrapper__left">
+                <a href="#" class="btn">もっとみる</a>
+              </div>
             </div>
 
             <!-- /works__text-wrapper -->
@@ -181,9 +172,9 @@
       </section>
       <!-- /works -->
   
-      <section class="skills">
+      <section class="skills top-page-sec">
         <div class="inner rev">
-          <h2 class="section-heading section-heading__rev"><span class="jp-title">できること</span>SKILLS</h2>
+          <h2 class="heading section-heading section-heading__rev"><span class="jp-title">できること</span>SKILLS</h2>
 
           <div class="skills__item-wrapper">
             <ul class="skills__item-lists">
@@ -220,9 +211,9 @@
       </section>
       <!-- /skills -->
   
-      <section class="contact">
+      <section class="contact top-page-sec">
         <div class="inner">
-          <h2 class="section-heading"><span class="jp-title">お問い合わせ</span>CONTACT</h2>
+          <h2 class="heading section-heading"><span class="jp-title">お問い合わせ</span>CONTACT</h2>
           <p class="contact-text">お忙しい中ご覧いただきありがとうございます。<br>お仕事の話はもちろん、サイトの感想など何でもお聞かせください。</p>
 
           <div class="btn-wrapper">
