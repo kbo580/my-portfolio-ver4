@@ -77,7 +77,6 @@ section{
   width: 100%;
   padding: 50px 0 80px;
   position: relative; 
-  // background-color: gray;
 }
 
 .thumbnail{
@@ -255,6 +254,20 @@ section{
       }
     }
   }
+}
+
+/* RPGのセリフ風枠 */
+.rpg-frame{
+  background-color: #000;
+  width: 100%;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.rpg-border{
+  border: 4px solid #fff;
+  border-radius: 4px;
+  position: relative;
 }
 
 @media (min-width: 575px){
@@ -535,7 +548,6 @@ body.active{
   
   &__item-image{
     transition: all .6s;
-
   }
 
   &__text-wrapper{
@@ -971,7 +983,7 @@ footer{
 .click-open{
   font-size: rem(12);
   margin-bottom: 16px;
-  color:#333;
+  color:#808080;
 }
   
 /* 記事ページ用ナビゲーション */
@@ -1260,6 +1272,146 @@ footer{
 }
 
 /*-------------------------------------------- */
+/* お問い合わせ */
+/* -------------------------------------------- */
+.contact{
+  // background: #000;
+  // background-color: pink;
+  // color: #fff;
+}
+
+.form-wrapper{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-parts{
+  color: #fff;
+  margin: 0 auto 30px;
+  width: 100%;
+
+  &__label{
+    position: absolute;
+    display: inline-block;
+    top: -6px;
+    left: 45px;
+    padding: 0 0.5em;
+    line-height: 1;
+    background-color: #000;
+    font-weight: bold;
+    z-index: 1;
+  }
+}
+
+/* フォーム部品 */
+.form-parts{
+  input[type="text"],
+  input[type="email"],
+  textarea{
+    width: 100%;
+    display: block;
+    padding: 1.5em 1em 1em;
+    border: 1px solid transparent;
+    background-color: inherit;
+    color: inherit;
+
+    &:focus{
+      outline:#000;
+      background-color: #000;
+    }
+  }
+
+  textarea{
+    height: 200px;
+  }
+}
+
+.acceptance{
+  margin-bottom: 60px;
+}
+
+/* 必須ボタン */
+.must::before{
+  content: "※";
+}
+
+.rpg-btn_submit{
+  // width: 200px;
+  // margin: 0 auto;
+  // max-width: 100%;
+  // background-color: #000;
+  // display: block;
+  // color: #fff;
+  // padding: 20px;
+  // line-height: 1;
+  // text-align: center;
+  // transition: all .4s;
+  // font-size: rem(16);
+  // border-radius: 4px;
+  // border: 4px solid #fff;
+  // font-family: "Font Awesome 5 Free";
+  // font-weight: 900;
+
+  &:hover{
+    opacity: .6;
+  }
+}
+
+/* contact form7用 */ 
+/* エラーメッセージを見やすくする */
+span.wpcf7-not-valid-tip {
+  padding-top: 0.5em;
+  font-weight: 600;
+  // display: block;
+
+  &::before{
+    content: "※";
+  }
+}
+
+.wpcf7 form .wpcf7-response-output{
+  color: #DD3232;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+@media (min-width: 1000px){
+  .form-wrapper{
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .form-parts{
+    margin-bottom: 40px;
+  }
+
+}
+
+@media (min-width: 1000px){
+  /* フォーム部品 */
+  .form-parts{
+    .title-label{
+      font-size: rem(16);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea{
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      font-size: 16px;
+    }
+  }
+
+  .acceptance{
+    margin-bottom: 80px;
+  }
+}
+
+/*-------------------------------------------- */
 /* 404ページ */
 /* -------------------------------------------- */
 /* 謝罪 */
@@ -1289,31 +1441,16 @@ footer{
 }
 
 /* セリフ */
-.serif-wrapper{
-  background-color: #000;
-  display: block;
-  width: 100%;
-  padding: 6px;
-  margin: 0 auto;
-  transition: all .4s;
-  border-radius: 6px;
-}
-
-.serif{
+.rpg-serif{
   font-family: 'DotGothic16', sans-serif;
   font-size: calc(1.125rem + ((1vw - 3.75px) * 1.92));
   color: #fff;
-  border-radius: 4px;
-  border: 4px solid #fff;
   padding: 1.5em 1em;
-  display: block;
-  line-height: 1;
-  position: relative;
 }
 
 @media (min-width: 1000px){
   /* セリフ */
-  .serif{
+  .rpg-serif{
     font-size: rem(30);
   }
 
