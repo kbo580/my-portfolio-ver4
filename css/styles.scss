@@ -691,14 +691,14 @@ body.active{
 /*-------------------------------------------- */
 /* skills */
 /* -------------------------------------------- */
-.skills{
-  &__item-wrapper{
-    margin-bottom: 20px;
-  }
+.skills-wrapper{
+  margin-bottom: 30px;
+}
 
-  &__item-lists{
-    margin-bottom: 60px;
-  }
+/* flexの補助用 */
+.skills-container{
+  align-items: start;
+  flex-wrap:wrap;
 }
 
 /* sectionのタイトルを右よせ */
@@ -711,16 +711,27 @@ body.active{
   align-self: flex-end;
 }
 
+/* 上の段 */
+.skills{
+  &__item-lists{
+    margin-bottom: 40px;
+    width: 100%;
+  }
+}
+
 /* スキルのリスト */
 .skill-list{
+
   &__image-wrapper{
     aspect-ratio: 16 / 9;
     overflow: hidden;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
 
   &__title{
-    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
 
   }
   
@@ -729,17 +740,55 @@ body.active{
   }
 }
 
-@media (min-width: 575px){
-  .skills{
-    &__item-wrapper{
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
-    }
+/* 下の段 */
+.skill-set-list{
+  width: 100%;
+  margin-bottom: 30px;
 
+  &__name{
+    margin-bottom: 8px;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__image{
+    background: url(../images/wordpress_icon_130782.png) center/cover;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  &__explain{
+    // color: #333333;
+  }
+}
+
+@media (min-width: 575px){
+  .skills-wrapper{
+    margin-bottom: 80px;
+  }
+
+  /* 上の段 */
+  .skills{
     &__item-lists{
       width: 49%;
+    }
+  }
+
+  /* スキルセット */
+  .skill-set-list{
+    width: 48%;
+    margin-bottom: 40px;
+
+    &__name{
+      margin-bottom: 12px;
+    }
+
+    &__image{
+      width: 50px;
+      height: 50px;
     }
   }
 }
@@ -748,6 +797,13 @@ body.active{
   .skills{
     &__item-lists{
       width: 30%;
+    }
+  }
+
+  /* スキルのリスト */
+  .skill-list{
+    &__title{
+      font-size: 24px;
     }
   }
 
@@ -1103,7 +1159,6 @@ footer{
 /* プロフィールページ */
 /* -------------------------------------------- */
 .profile-wrapper{
-  border: 1px solid #000;
   margin-bottom: 80px;
 }
 
@@ -1117,7 +1172,7 @@ footer{
 
   /* 自己紹介 */
   &__text-list:not(:last-child){
-    margin-bottom: 8px;
+    margin-bottom: 20px;
   }
 
   &__name{
@@ -1157,7 +1212,7 @@ footer{
       width: 1.5em;
       height: 1.5em;
       border-radius: 50%;
-      background: red;
+      background: #808080;
       display: block;
       position: absolute;
       top: 0;
@@ -1170,33 +1225,6 @@ footer{
   }
 }
 
-/* スキル */
-.skill-set-list{
-  width: 100%;
-  &:not(:last-child){
-    margin-bottom: 30px;
-  }
-
-  &__name{
-    margin-bottom: 8px;
-    font-weight: bold;
-    display: flex;
-    align-items: flex-end;
-  }
-
-  &__image{
-    background: url(../images/wordpress_icon_130782.png) center/cover;
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    margin-right: 8px;
-  }
-
-  &__explain{
-    // color: #333333;
-  }
-}
-
 @media (min-width: 575px) {
   .profile-wrapper{
     margin-bottom: 100px;
@@ -1206,126 +1234,14 @@ footer{
   .about{
   
     &__text-list:not(:last-child){
+      margin-bottom: 30px;
+    }
+
+    &__name{
       margin-bottom: 16px;
     }
   }
-  
-  /* 経歴 */
-  .career{
-  
-    &__list{
-      position: relative;
-      padding: 0 0 0 1.8em;
-      &::before{
-        content: " ";
-        width: 2px;
-        background: #3333;
-        display: block;
-        position: absolute;
-        top: 25px;
-        left: 0.7em;
-        bottom: 2px;
-      }
-  
-      &:last-child::before{
-        height: 60%;
-      }
-    }
-  
-    &__timeline{
-      display: block;
-      color: #808080;
-  
-      &::before{
-        content: "";
-        width: 1.5em;
-        height: 1.5em;
-        border-radius: 50%;
-        background: red;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-    }
-  
-    &__content{
-      padding: 1.5em 0;
-    }
-  }
-  
-  /* スキル */
-  .skill-set-list{
-    width: 100%;
-    &:not(:last-child){
-      margin-bottom: 30px;
-    }
-  
-    &__name{
-      margin-bottom: 8px;
-      font-weight: bold;
-      display: flex;
-      align-items: flex-end;
-    }
-  
-    &__image{
-      background: url(../images/wordpress_icon_130782.png) center/cover;
-      width: 40px;
-      height: 40px;
-      display: inline-block;
-      margin-right: 8px;
-    }
-  
-    &__explain{
-      // color: #333333;
-    }
-  }
-  /* サブタイトル */
-  .about{
-    .h3-title{
-      margin-bottom: 32px;
-    }
-  }
 
-  .about{
-    /* 自分について */
-    .about-me-wrapper{
-      margin-bottom: 80px;
-
-      .name{
-        margin-bottom: 12px;
-      }
-
-       /* 自己紹介 */
-      .about-text-list{
-        li:not(:last-child){
-          margin-bottom: 16px;
-        }
-      }
-    }
-  }
-
-  /* スキル */
-  .skills-container{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap:wrap;
-    width: 100%;
-  }
-
-  .skill-set-list{
-    width: 48%;
-    margin-bottom: 40px;
-
-    &__name{
-      margin-bottom: 12px;
-    }
-
-    &__image{
-      width: 50px;
-      height: 50px;
-    }
-  }
   
 }
 
