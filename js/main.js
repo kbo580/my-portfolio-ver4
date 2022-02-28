@@ -38,8 +38,18 @@ $(function(){
     $(this).find('img').css('transform','scale(1, 1)');
   });
 
+  // 記事ページのデモ
+  // $('.pc-image, .sp-image').hide();
+  $('#pcToggle').click(function(){ 
+    $('.pc-image').slideToggle(400);
+    return false;
+  });
 
- 
+  $('#spToggle').click(function(){ 
+    $('.sp-image').slideToggle(400);
+    return false;
+  });
+
 	$('.slider').slick({
 		// fade:true,//切り替えをフェードで行う。初期値はfalse。
 		// autoplay: true,//自動的に動き出すか。初期値はfalse。
