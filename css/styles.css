@@ -1025,6 +1025,7 @@ footer {
   /* pcでのイメージ */
   .pc-image-wrapper {
     margin-bottom: 40px;
+    width: 100%;
   }
   .pc-image-wrapper .pc-image {
     display: block;
