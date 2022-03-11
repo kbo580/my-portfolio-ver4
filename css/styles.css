@@ -56,11 +56,18 @@ img {
 
 body {
   color: #333333;
+  background-color: #FFFEF8;
   font-family: 'Noto Sans JP', sans-serif;
   letter-spacing: 0.15em;
   position: relative;
   font-size: calc(0.875rem + ((1vw - 3.75px) * 0.32));
   /* font-size:14px */
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  background-color: #FFFEF8;
 }
 
 .main-contents {
@@ -153,7 +160,7 @@ section {
 /* 下線付きのサブタイトル */
 .sub-title--border {
   position: relative;
-  border-bottom: 3px solid #000;
+  border-bottom: 3px solid #333;
   display: inline-block;
 }
 
@@ -161,7 +168,7 @@ section {
   position: absolute;
   content: " ";
   display: block;
-  border-bottom: solid 3px #8d8d8d;
+  border-bottom: solid 3px #fc2;
   bottom: -3px;
   width: 30%;
 }
@@ -426,6 +433,7 @@ body.active {
         -ms-flex-align: center;
             align-items: center;
     background-color: #cbcbd3;
+    background-color: #F3F3F3;
     padding-top: 90px;
     width: 300px;
     height: 100vh;
@@ -505,7 +513,18 @@ body.active {
 /* -------------------------------------------- */
 .mv {
   height: 100vh;
-  background: url("../images/AdobeStock_372717887.jpeg") center/cover no-repeat;
+}
+
+.mv::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background: url("../images/AdobeStock_372717887.jpeg") no-repeat center;
+  background-size: cover;
 }
 
 /*-------------------------------------------- */
@@ -592,7 +611,7 @@ body.active {
   position: absolute;
   z-index: -1;
   display: block;
-  background-color: #f0f0f0;
+  background-color: #0C40A5;
   top: 0;
 }
 
