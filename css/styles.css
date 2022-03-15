@@ -84,7 +84,7 @@ body {
 
 section {
   width: 100%;
-  padding: 50px 0 80px;
+  padding: 60px 0 120px;
   position: relative;
 }
 
@@ -116,13 +116,13 @@ section {
         -ms-flex-direction: column;
             flex-direction: column;
     min-height: 100vh;
-    width: calc(100% - 300px);
+    width: calc(100% - 250px);
   }
   body {
     font-size: 1rem;
   }
   section {
-    padding: 90px 0 150px;
+    padding: 140px 0 150px;
   }
 }
 
@@ -154,7 +154,7 @@ section {
   font-weight: bold;
   font-size: calc(1.25rem + ((1vw - 3.75px) * 1.28));
   /* font-size: 20px */
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 /* 下線付きのサブタイトル */
@@ -168,7 +168,7 @@ section {
   position: absolute;
   content: " ";
   display: block;
-  border-bottom: solid 3px #fc2;
+  border-bottom: solid 3px #ffd54d;
   bottom: -3px;
   width: 30%;
 }
@@ -177,8 +177,8 @@ section {
 .top-page-sec::before {
   content: "";
   width: 100%;
-  height: 90px;
-  background-color: rgba(0, 0, 0, 0.2);
+  height: 100px;
+  background-color: #ced7dc;
   display: block;
   position: absolute;
   top: 0;
@@ -203,6 +203,7 @@ section {
   border: 2px solid #333333;
   background: transparent;
   line-height: 1;
+  font-size: 1rem;
 }
 
 .btn::before,
@@ -223,7 +224,7 @@ section {
   left: 5px;
   -webkit-transition: .4s;
   transition: .4s;
-  background-color: #D8D8D8;
+  background-color: #ffd54d;
 }
 
 .btn:hover:after {
@@ -320,7 +321,7 @@ section {
     margin-bottom: 20px;
   }
   .top-page-sec::before {
-    height: 160px;
+    height: 210px;
   }
   .page-heading {
     padding-bottom: 50px;
@@ -330,9 +331,30 @@ section {
 /* -------------------------------------------- */
 /* header */
 /* -------------------------------------------- */
-/* header内のサイトタイトル */
-.header-site-title {
+.header {
   font-family: 'Montserrat', sans-serif;
+}
+
+.sp-header {
+  z-index: 2;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.site-title {
+  font-size: 1.25rem;
 }
 
 /* ハンバーガーメニュー */
@@ -340,11 +362,8 @@ section {
   width: 30px;
   height: 30px;
   position: relative;
-  position: fixed;
-  top: 2%;
-  right: 4%;
+  z-index: 2;
   cursor: pointer;
-  z-index: 3;
 }
 
 /* ハンバーガーメニューのバー */
@@ -408,16 +427,9 @@ body.active {
   display: none;
 }
 
-@media (min-width: 575px) {
-  /* header内のサイトタイトル */
-  .header-site-title {
-    font-size: 1.5rem;
-  }
-}
-
 @media (min-width: 1000px) {
   /* sp用header */
-  .burger {
+  .sp-header {
     display: none;
   }
   /* pc用のheader */
@@ -435,19 +447,21 @@ body.active {
     background-color: #cbcbd3;
     background-color: #F3F3F3;
     padding-top: 90px;
-    width: 300px;
+    width: 250px;
     height: 100vh;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
   }
   /* header内のサイトタイトル */
-  .header-site-title {
-    font-size: 1.5rem;
-    margin-bottom: 70px;
+  .site-title {
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 80px;
     padding: 0 20px;
+    line-height: 1.5;
   }
-  .header-site-title--link {
+  .site-title--link {
     display: inline-block;
   }
 }
@@ -461,12 +475,12 @@ body.active {
   width: 80%;
   height: 100vh;
   position: fixed;
+  z-index: 2;
   top: 0;
   left: -150%;
   -webkit-transition: .5s;
   transition: .5s;
   overflow-y: scroll;
-  z-index: 2;
   font-size: 1rem;
 }
 
@@ -481,7 +495,7 @@ body.active {
 /* ナビのリンク */
 .nav-link {
   font-weight: bold;
-  padding: 1em;
+  margin-bottom: 40px;
 }
 
 .nav-link:first-child {
@@ -496,7 +510,6 @@ body.active {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
 }
 
 @media (min-width: 1000px) {
@@ -539,7 +552,7 @@ body.active {
 }
 
 .works__item-wrapper:not(:last-child) {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .works__text--mb {
@@ -570,7 +583,8 @@ body.active {
   width: 100%;
   height: auto;
   overflow: hidden;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #dfdfdf;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
@@ -594,9 +608,34 @@ body.active {
   overflow: hidden;
 }
 
-.btn-wrapper__left {
-  text-align: left;
-  margin-top: 20px;
+.link-wrapper {
+  text-align: center;
+}
+
+.more-link {
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding: 0 20px 0 0;
+}
+
+.right-arrow::after {
+  content: "";
+  position: absolute;
+  top: 42%;
+  right: 7px;
+  width: 5px;
+  height: 5px;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.right-arrow:hover::after {
+  right: 0px;
 }
 
 .works-sub-wrapper {
@@ -607,11 +646,11 @@ body.active {
 .works-sub-wrapper::after {
   content: "";
   width: 100%;
-  height: 100%;
+  height: 80%;
   position: absolute;
   z-index: -1;
   display: block;
-  background-color: #0C40A5;
+  background-color: #ced7dc;
   top: 0;
 }
 
@@ -661,7 +700,6 @@ body.active {
 
 /* ドット */
 .slick-dots {
-  z-index: 1;
   position: absolute;
   bottom: 1%;
   text-align: right;
@@ -708,15 +746,13 @@ body.active {
   }
   .works-sub-wrapper::after {
     width: 70%;
+    height: 100%;
   }
 }
 
 @media (min-width: 1000px) {
   .works__item-wrapper:not(:last-child) {
     margin-bottom: 150px;
-  }
-  .works__text--mb {
-    margin-bottom: 40px;
   }
   .works__item {
     width: 31%;
@@ -727,7 +763,7 @@ body.active {
 /* skills */
 /* -------------------------------------------- */
 .skills-wrapper {
-  margin-bottom: 30px;
+  margin-bottom: 48px;
 }
 
 /* flexの補助用 */
@@ -765,19 +801,19 @@ body.active {
 .skill-list__image-wrapper {
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .skill-list__title {
   font-weight: bold;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 /* 下の段 */
 .skill-set-list {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .skill-set-list__name {
@@ -801,7 +837,7 @@ body.active {
 
 @media (min-width: 575px) {
   .skills-wrapper {
-    margin-bottom: 130px;
+    margin-bottom: 80px;
   }
   /* 上の段 */
   .skills__item-lists {
@@ -837,13 +873,14 @@ body.active {
 .contact-text {
   max-width: 575px;
   width: 100%;
-  margin: 0 auto 60px;
+  margin: 0 auto 80px;
 }
 
 /*-------------------------------------------- */
 /* footer */
 /* -------------------------------------------- */
 footer {
+  border-top: 3px solid #ffd54d;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
