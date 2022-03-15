@@ -21,35 +21,40 @@
 <body>
 
   <div class="mv">
-    <h1 class="site-title">Yuta Kobayashi's Portfolio</h1>
+    <!-- <h1 class="site-title">Yuta Kobayashi's Portfolio</h1> -->
   </div>
 
   <div class="container">
+    <header class="sp-header header inner">
+      <h1 class="site-title"><a href="#" class="site-title--link">Yuta Kobayashi's<br>Portfolio</a></h1>
+  
+      <div class="burger" id="show">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <!-- /burger -->
 
-    <nav class="sp-nav" id="nav">
-      <ul class="sp-nav-menu">
-        <li class="nav-link"><a href="index.html">HOME</a></li>
-        <li class="nav-link"><a href="works.html" target="_blank" rel="noopener noreferrer">WORKS</a></li>
-        <li class="nav-link"><a href="">SKILLS</a></li>
-        <li class="nav-link"><a href="profile.html">PROFILE</a></li>
-        <li class="nav-link"><a href="contact.html">CONTACT</a></li>
-        <li class="nav-link"><a href="404.html">BLOG</a></li>
-      </ul>
-    </nav>
-    <!-- /sp-nav -->
-
-    <div id="screen"></div>
+      <nav class="sp-nav" id="nav">
+        <ul class="sp-nav-menu">
+          <li class="nav-link"><a href="index.html">HOME</a></li>
+          <li class="nav-link"><a href="works.html" target="_blank" rel="noopener noreferrer">WORKS</a></li>
+          <li class="nav-link"><a href="">SKILLS</a></li>
+          <li class="nav-link"><a href="profile.html">PROFILE</a></li>
+          <li class="nav-link"><a href="contact.html">CONTACT</a></li>
+          <li class="nav-link"><a href="404.html">BLOG</a></li>
+        </ul>
+      </nav>
+      <!-- /sp-nav -->
+  
+      <div id="screen"></div>
       <!-- /スクリーン -->
 
-    <div class="burger" id="show">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-    <!-- /burger -->
+    </header>
+    <!-- /sp-header -->
 
-    <header class="pc-header">
-      <h2 class="header-site-title"><a href="#" class="header-site-title--link">Yuta Kobayashi's<br> Portfolio</a></h2>
+    <header class="pc-header header">
+      <h2 class="site-title"><a href="#" class="site-title--link">Yuta Kobayashi's<br> Portfolio</a></h2>
 
       <nav class="pc-nav">
         <ul class="pc-nav-menu">
@@ -80,7 +85,7 @@
               <li class="works__item">
                 <a href="single.html">
                   <figure class="works__item-image-wrapper">
-                    <img src="images/clinic-top.png" alt="" class="works__item-image thumbnail">
+                    <img src="images/clinic-top.png" alt="のサムネイル" class="works__item-image thumbnail">
                   </figure>
                 </a>
   
@@ -122,10 +127,10 @@
           <div class="works__item-wrapper works-sub-wrapper">
             <div class="works__text-wrapper">
               <h3 class="sub-title sub-title--border">練習用コーディング</h3>
-              <p class="works__text">コーディングの練習で作成したサイトです。</p>
+              <p class="works__text works__text--mb">コーディングの練習で作成したサイトです。</p>
 
-              <div class="btn-wrapper btn-wrapper__left">
-                <a href="archive-coding.html" class="btn">もっとみる</a>
+              <div class="link-wrapper">
+                <a href="archive-coding.html" class="more-link right-arrow">もっとみる</a>
               </div>
             </div>
 
