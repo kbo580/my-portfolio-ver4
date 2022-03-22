@@ -248,7 +248,7 @@ section{
 .breadcrumbs{
   color: #333;
   padding: 1em 0;
-  background-color: #ddd;
+  background-color: $subColor;
   margin-bottom: 30px;
 
   .breadcrumb_inner {
@@ -558,13 +558,13 @@ body.active{
     flex-wrap: wrap;
     justify-content: space-between;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     width: 100%;
   }
 
   &__item{
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   
   &__item-image-wrapper{
@@ -973,9 +973,8 @@ footer{
   }
 
   &__article-title{
-    color: red;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 32px;
     font-size: calc(1.5rem + ((1vw - 3.75px) * 2.9091));
   }
 
@@ -994,8 +993,7 @@ footer{
   }
 
   &__list{
-    margin-bottom: 16px;
-    // border: 3px solid green;
+    margin-bottom: 24px;
   
     &:last-child{
       margin-bottom: 0;
@@ -1004,13 +1002,12 @@ footer{
 
   &__list-title{
     font-weight: bold;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     font-size: calc(1rem + ((1vw - 3.75px) * 0.4848));
   }
 
   &__list-content{
     color: #333;
-    // background-color: #ddd;
   }
 }
 
@@ -1095,14 +1092,18 @@ footer{
   display: flex;
   justify-content: space-between;
   min-width: 270px;
-  width: 30%;
+  width: 40%;
   margin: 0 auto;
 }
 
 .to-works,
 .prev,
 .next{
-  color: red;
+
+}
+
+.pagination .fa-solid{
+  padding: 4px;
 }
 
 
@@ -1192,7 +1193,6 @@ footer{
     }
   
     &__article-title{
-      margin-bottom: 40px;
       font-size: rem(48);
     }
   }
@@ -1245,17 +1245,18 @@ footer{
 /* ページネーション */
 .pagination .nav-links{
   display: flex;
-  justify-content: center;
-  gap: 8px;
+  justify-content: space-between;
+  min-width: 270px;
+  width: 100%;
+
+  margin: 0 auto;
+  border: 1px solid #000;
 
   /* 数字のリンク */
   .page-numbers{
-    color: #333;
-    background-color: #fff;
-    border: 2px solid #000;
     display: inline-block;
     border-radius: 4px;
-    padding: 0.5em 0.8em;
+    padding: 0 0.5em;
     transition: .3s;
 
     /* 現在のページ */

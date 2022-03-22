@@ -244,7 +244,7 @@ section {
 .breadcrumbs {
   color: #333;
   padding: 1em 0;
-  background-color: #ddd;
+  background-color: #ced7dc;
   margin-bottom: 30px;
 }
 
@@ -573,13 +573,13 @@ body.active {
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   width: 100%;
 }
 
 .works__item {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .works__item-image-wrapper {
@@ -967,9 +967,8 @@ footer {
 /* 記事ページ */
 /* -------------------------------------------- */
 .single__article-title {
-  color: red;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 32px;
   font-size: calc(1.5rem + ((1vw - 3.75px) * 2.9091));
 }
 
@@ -988,7 +987,7 @@ footer {
 }
 
 .single__list {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .single__list:last-child {
@@ -997,7 +996,7 @@ footer {
 
 .single__list-title {
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   font-size: calc(1rem + ((1vw - 3.75px) * 0.4848));
 }
 
@@ -1090,14 +1089,12 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-width: 270px;
-  width: 30%;
+  width: 40%;
   margin: 0 auto;
 }
 
-.to-works,
-.prev,
-.next {
-  color: red;
+.pagination .fa-solid {
+  padding: 4px;
 }
 
 @media (min-width: 575px) {
@@ -1136,7 +1133,6 @@ footer {
 
 @media (min-width: 1000px) {
   .single__article-title {
-    margin-bottom: 40px;
     font-size: 3rem;
   }
   /* イメージ画像の大枠 */
@@ -1185,20 +1181,20 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 8px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 270px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #000;
   /* 数字のリンク */
 }
 
 .pagination .nav-links .page-numbers {
-  color: #333;
-  background-color: #fff;
-  border: 2px solid #000;
   display: inline-block;
   border-radius: 4px;
-  padding: 0.5em 0.8em;
+  padding: 0 0.5em;
   -webkit-transition: .3s;
   transition: .3s;
   /* 現在のページ */
