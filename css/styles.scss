@@ -125,7 +125,6 @@ section{
     flex-direction: column;
     min-height: 100vh;
     width: calc(100% - 250px);
-    width: calc(100% - 200px);
   }
 
   body{
@@ -435,7 +434,7 @@ body.active{
     background-color: rgb(203, 203, 211);
     background-color: #F3F3F3;
     padding-top: 90px;
-    width: 200px;
+    width: 250px;
     height: 100vh;
     position: -webkit-sticky;
     position: sticky;
@@ -464,7 +463,7 @@ body.active{
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   width: 80%;
-  width: 100%;
+  // width: 100%;
   height: 100vh;
   position: fixed;
   z-index: 1;
@@ -549,12 +548,8 @@ body.active{
   &__item-wrapper{
     margin-bottom: 80px;
   }
-
-  &__item-wrapper--mb0{
-    margin-bottom: 0px;
-  }
   
-  &__text--mb{
+  &__text{
     margin-bottom: 20px;
   }
 
@@ -699,7 +694,43 @@ body.active{
   text-align: right;
 }
 
-.blog-link{
+.blog-pr{
+  text-align: center;
+  width: 250px;
+  margin: 0 auto 24px;
+  position: relative;
+  font-size: 16px;
+
+  &:before, 
+  &:after {
+    content: '';
+    position: absolute;
+    top: 60%;
+    display: inline-block;
+    width: 32px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  &:before {
+    left: -8%;
+    transform: rotate(60deg);
+  }
+
+  &:after {
+    right: -8%;
+    transform: rotate(-60deg);
+  }
+
+  &--under-line{
+    background:linear-gradient(transparent 60%, #fff799 60%);
+  }
+}
+
+.blog-banner{
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
   transition: all .4s;
   &:hover{
     opacity: 0.8;
@@ -738,16 +769,23 @@ body.active{
     }
   }
 
+  .blog-pr{
+    font-size: 20px;
+    width: 300px;
+
+    &:before, 
+    &:after {
+      width: 40px;
+      height: 3px;
+    }
+  }
+
 }
 
 @media (min-width: 1000px){
   .works{
     &__item-wrapper{
       margin-bottom: 150px;
-    }
-
-    &__item-wrapper--mb0{
-      margin-bottom: 0px;
     }
 
     &__item{
