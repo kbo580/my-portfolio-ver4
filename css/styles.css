@@ -1082,48 +1082,22 @@ footer {
 }
 
 /* 記事ページ用ナビゲーション */
-.post-navigation .nav-links {
+.pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: relative;
-  width: 100%;
+  min-width: 270px;
+  width: 30%;
+  margin: 0 auto;
 }
 
-.post-navigation .nav-links .nav-previous,
-.post-navigation .nav-links .nav-next {
-  position: absolute;
-}
-
-.post-navigation .nav-links .nav-previous a,
-.post-navigation .nav-links .nav-next a {
-  color: #333;
-  border: 2px solid #000;
-  background-color: #fff;
-  display: inline-block;
-  border-radius: 4px;
-  padding: 0.5em 0.8em;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-.post-navigation .nav-links .nav-previous a:hover,
-.post-navigation .nav-links .nav-next a:hover {
-  background: #000;
-  color: #fff;
-}
-
-.post-navigation .nav-links .nav-previous {
-  top: 0;
-  left: 0;
-}
-
-.post-navigation .nav-links .nav-next {
-  top: 0;
-  right: 0;
+.to-works,
+.prev,
+.next {
+  color: red;
 }
 
 @media (min-width: 575px) {

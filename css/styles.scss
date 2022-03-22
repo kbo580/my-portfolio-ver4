@@ -1091,41 +1091,56 @@ footer{
 }
   
 /* 記事ページ用ナビゲーション */
-.post-navigation .nav-links{
+.pagination{
   display: flex;
   justify-content: space-between;
-  position: relative;
-  width: 100%;
-
-  .nav-previous,
-  .nav-next{
-    position: absolute;
-    a{
-      color: #333;
-      border: 2px solid #000;
-      background-color: #fff;
-      display: inline-block;
-      border-radius: 4px;
-      padding: 0.5em 0.8em;
-      transition: .3s;
-      &:hover{
-        background: #000;
-        color: #fff;
-      }
-    }
-  }
-
-  .nav-previous{
-    top: 0;
-    left: 0;
-  }
-  
-  .nav-next{
-    top: 0;
-    right: 0;
-
-  }
+  min-width: 270px;
+  width: 30%;
+  margin: 0 auto;
 }
+
+.to-works,
+.prev,
+.next{
+  color: red;
+}
+
+
+// .post-navigation .nav-links{
+  // display: flex;
+  // justify-content: space-between;
+  // position: relative;
+  // width: 100%;
+
+  // .nav-previous,
+  // .nav-next{
+  //   position: absolute;
+  //   a{
+  //     color: #333;
+  //     border: 2px solid #000;
+  //     background-color: #fff;
+  //     display: inline-block;
+  //     border-radius: 4px;
+  //     padding: 0.5em 0.8em;
+  //     transition: .3s;
+  //     &:hover{
+  //       background: #000;
+  //       color: #fff;
+  //     }
+  //   }
+  // }
+
+  // .nav-previous{
+  //   top: 0;
+  //   left: 0;
+  // }
+  
+  // .nav-next{
+  //   top: 0;
+  //   right: 0;
+
+  // }
+// }
 
 @media (min-width: 575px) {
   .single{
