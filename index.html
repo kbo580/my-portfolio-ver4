@@ -20,9 +20,9 @@
 
 <body>
 
-  <div class="mv">
+  <!-- <div class="mv"> -->
     <!-- <h1 class="site-title">Yuta Kobayashi's Portfolio</h1> -->
-  </div>
+  <!-- </div> -->
 
   <div class="container">
     <header class="sp-header header inner">
@@ -47,14 +47,14 @@
       </nav>
       <!-- /sp-nav -->
   
-      <!-- <div id="screen"></div> -->
+      <div id="screen"></div>
       <!-- /スクリーン -->
 
     </header>
     <!-- /sp-header -->
 
     <header class="pc-header header">
-      <h2 class="site-title"><a href="#" class="site-title--link">Yuta<br>Kobayashi's<br> Portfolio</a></h2>
+      <h2 class="site-title"><a href="#" class="site-title--link">Yuta Kobayashi's<br>Portfolio</a></h2>
 
       <nav class="pc-nav">
         <ul class="pc-nav-menu">
@@ -64,6 +64,7 @@
           <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="profile.html">PROFILE</a></li>
           <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="contact.html">CONTACT</a></li>
           <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="404.html">BLOG</a></li>
+          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="template.html">添付</a></li>
         </ul>
 
       </nav>
@@ -78,7 +79,7 @@
 
           <div class="works__item-wrapper works__item-wrapper--text-align">
             <h3 class="sub-title sub-title--border">架空案件</h3>
-            <p class="works__text works__text--mb">架空の案件を想定して作成したサイトです。</p>
+            <p class="works__text">架空の案件を想定して作成したサイトです。</p>
 
             <ul class="works__item-list">
   
@@ -124,58 +125,71 @@
           </div>
           <!-- /works__item-wrapper --><!--架空案件-->
         </div>
+        <!-- /inner -->
 
-          <div class="works__item-wrapper works-sub-wrapper">
-            <div class="works__text-wrapper">
-              <h3 class="sub-title sub-title--border">練習用コーディング</h3>
-              <p class="works__text works__text--mb">コーディングの練習で作成したサイトです。</p>
+        <div class="works__item-wrapper works-sub-wrapper">
+          <div class="works__text-wrapper">
+            <h3 class="sub-title sub-title--border">練習用コーディング</h3>
+            <p class="works__text">コーディングの練習で作成したサイトです。</p>
 
-              <div class="link-wrapper">
-                <a href="archive-coding.html" class="more-link right-arrow">もっとみる</a>
-              </div>
+            <div class="link-wrapper">
+              <a href="archive-coding.html" class="more-link right-arrow">もっとみる</a>
             </div>
-
-            <!-- /works__text-wrapper -->
-
-            <div class="sliderarea works__image-wrapper">
-              <ul class="slider">
-
-                <li class="slider-item">
-                  <img src="images/huvest-top.png" alt="模写コーディングその１" class="thumbnail">
-                </li>
-
-                <li class="slider-item">
-                  <img src="images/LP-site.png" alt="模写コーディングその２" class="thumbnail">
-                </li>
-
-                <li class="slider-item">
-                  <img src="images/k-create-top.png" alt="模写コーディングその３" class="thumbnail">
-                </li>
-              </ul>
-              <!-- /slider -->
-            </div>
-            <!-- /sliderarea works__image-wrapper -->
-  
+            <!-- /link-wrapper -->
           </div>
-          <!-- /works__item-wrapper --><!--練習用コーディング-->
+          <!-- /works__text-wrapper -->
 
-          <div class="works__item-wrapper works-sub-wrapper works__item-wrapper--rev works__item-wrapper--mb0">
-            <div class="works__text-wrapper">
-              <h3 class="sub-title sub-title--border">学習ブログ</h3>
-              <p class="works__text">学習のアウトプットのためにブログを書いています。</p>
-            </div>
-            <!-- /works__text-wrapper -->
+          <div class="sliderarea works__image-wrapper">
+            <ul class="slider">
 
-            <figure class="works__image-wrapper">
-              <a href="https://kbyt-programming.com/" class="blog-link">
-                <img src="images/blog-image.png" alt="ブログ画像" class="thumbnail">
-              </a>
-            </figure>
+              <li class="slider-item">
+                <img src="images/huvest-top.png" alt="模写コーディングその１" class="thumbnail">
+              </li>
 
+              <li class="slider-item">
+                <img src="images/LP-site.png" alt="模写コーディングその２" class="thumbnail">
+              </li>
+
+              <li class="slider-item">
+                <img src="images/k-create-top.png" alt="模写コーディングその３" class="thumbnail">
+              </li>
+            </ul>
+            <!-- /slider -->
           </div>
-          <!-- /works__item-wrapper --><!--学習ブログ-->
+          <!-- /sliderarea works__image-wrapper -->
 
-        <!-- </div> -->
+        </div>
+        <!-- /works__item-wrapper --><!--練習用コーディング-->
+
+        <div class="works__item-wrapper works-sub-wrapper works__item-wrapper--rev">
+          <div class="works__text-wrapper">
+            <h3 class="sub-title sub-title--border">バナー制作</h3>
+            <p class="works__text">バナー制作の練習です</p>
+
+            <div class="link-wrapper">
+              <a href="archive-coding.html" class="more-link right-arrow">もっとみる</a>
+            </div>
+            <!-- /link-wrapper -->
+          </div>
+          <!-- /works__text-wrapper -->
+
+          <div class="works__image-wrapper">
+            <a href="https://kbyt-programming.com/" class="banner-link">
+              <img src="images/no-image.png" alt="バナー画像" class="thumbnail">
+            </a>
+          </div>
+
+        </div>
+        <!-- /works__item-wrapper --><!--バナー練習-->
+
+        <div class="inner">
+          <p class="blog-pr">学習のアウトプットのために<br><span class="blog-pr--under-line">ブログも書いております</span></p>
+          
+          <p class="blog-banner">
+            <a href="#">
+              <img src="images/blog-image.png" alt="" class="thumbnail">
+            </a>
+          </p>
         <!-- /inner -->
         
       </section>
