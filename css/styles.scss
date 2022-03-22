@@ -1044,7 +1044,7 @@ footer{
 
 /* イメージ画像の大枠 */
 .single__site-image-wrapper{
-  margin-bottom: 64px;
+  margin-bottom: 80px;
 }
 
 /* pcでのイメージ */
@@ -1092,13 +1092,24 @@ footer{
   display: flex;
   justify-content: space-between;
   min-width: 270px;
-  width: 40%;
+  max-width: 400px;
+  width: 60%;
   margin: 0 auto;
 }
 
 .to-works,
 .prev,
 .next{
+  a{
+    display: block;
+    transition: all .3s;
+    padding: 0 0.5em;
+    border-radius: 4px;
+    &:hover{
+      background: $accentColor;
+      color: #333;
+    }
+  }
 
 }
 
@@ -1234,7 +1245,6 @@ footer{
 }
 
 
-
 /*-------------------------------------------- */
 /* works */
 /* -------------------------------------------- */
@@ -1243,14 +1253,16 @@ footer{
 }
 
 /* ページネーション */
-.pagination .nav-links{
+.works__wrapper .pagination{
+  width: 100%;
+}
+
+.works__wrapper .pagination .nav-links{
   display: flex;
   justify-content: space-between;
   min-width: 270px;
   width: 100%;
-
   margin: 0 auto;
-  border: 1px solid #000;
 
   /* 数字のリンク */
   .page-numbers{
@@ -1261,15 +1273,16 @@ footer{
 
     /* 現在のページ */
     &.current{
-      background-color: #000;
-      color: #fff;
+      background-color: $accentColor;
+      color: #333;
+    }
+
+    &:hover{
+      background: $accentColor;
+      color: #333;
     }
   }
-
-  a:hover{
-    background: #000;
-    color: #fff;
-  }
+  
 }
 
 @media (min-width: 575px){

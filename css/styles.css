@@ -1035,7 +1035,7 @@ footer {
 
 /* イメージ画像の大枠 */
 .single__site-image-wrapper {
-  margin-bottom: 64px;
+  margin-bottom: 80px;
 }
 
 /* pcでのイメージ */
@@ -1089,8 +1089,26 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-width: 270px;
-  width: 40%;
+  max-width: 400px;
+  width: 60%;
   margin: 0 auto;
+}
+
+.to-works a,
+.prev a,
+.next a {
+  display: block;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  padding: 0 0.5em;
+  border-radius: 4px;
+}
+
+.to-works a:hover,
+.prev a:hover,
+.next a:hover {
+  background: #ffd54d;
+  color: #333;
 }
 
 .pagination .fa-solid {
@@ -1177,7 +1195,11 @@ footer {
 }
 
 /* ページネーション */
-.pagination .nav-links {
+.works__wrapper .pagination {
+  width: 100%;
+}
+
+.works__wrapper .pagination .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1187,11 +1209,10 @@ footer {
   min-width: 270px;
   width: 100%;
   margin: 0 auto;
-  border: 1px solid #000;
   /* 数字のリンク */
 }
 
-.pagination .nav-links .page-numbers {
+.works__wrapper .pagination .nav-links .page-numbers {
   display: inline-block;
   border-radius: 4px;
   padding: 0 0.5em;
@@ -1200,14 +1221,14 @@ footer {
   /* 現在のページ */
 }
 
-.pagination .nav-links .page-numbers.current {
-  background-color: #000;
-  color: #fff;
+.works__wrapper .pagination .nav-links .page-numbers.current {
+  background-color: #ffd54d;
+  color: #333;
 }
 
-.pagination .nav-links a:hover {
-  background: #000;
-  color: #fff;
+.works__wrapper .pagination .nav-links .page-numbers:hover {
+  background: #ffd54d;
+  color: #333;
 }
 
 @media (min-width: 575px) {
