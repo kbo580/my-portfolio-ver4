@@ -1388,7 +1388,6 @@ footer{
     }
   }
 
-  
 }
 
 @media (min-width: 1025px){
@@ -1414,6 +1413,10 @@ footer{
   // color: #fff;
 }
 
+.contact-page-text{
+  margin-bottom: 32px;
+}
+
 .form-wrapper{
   width: 100%;
   margin: 0 auto;
@@ -1421,7 +1424,7 @@ footer{
 
 .form-parts{
   color: #fff;
-  margin: 0 auto 30px;
+  margin: 0 auto 32px;
   width: 100%;
 
   &__label{
@@ -1461,34 +1464,16 @@ footer{
 }
 
 .acceptance{
-  margin-bottom: 60px;
+  margin-bottom: 80px;
+}
+
+.form-btn-wrapper{
+  
 }
 
 /* 必須ボタン */
 .must::before{
   content: "※";
-}
-
-.rpg-btn_submit{
-  // width: 200px;
-  // margin: 0 auto;
-  // max-width: 100%;
-  // background-color: #000;
-  // display: block;
-  // color: #fff;
-  // padding: 20px;
-  // line-height: 1;
-  // text-align: center;
-  // transition: all .4s;
-  // font-size: rem(16);
-  // border-radius: 4px;
-  // border: 4px solid #fff;
-  // font-family: "Font Awesome 5 Free";
-  // font-weight: 900;
-
-  &:hover{
-    opacity: .6;
-  }
 }
 
 /* contact form7用 */ 
@@ -1510,7 +1495,7 @@ span.wpcf7-not-valid-tip {
 }
 
 
-@media (min-width: 1000px){
+@media (min-width: 575px){
   .form-wrapper{
     max-width: 600px;
     margin: 0 auto;

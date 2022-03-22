@@ -1334,6 +1334,10 @@ footer {
 /*-------------------------------------------- */
 /* お問い合わせ */
 /* -------------------------------------------- */
+.contact-page-text {
+  margin-bottom: 32px;
+}
+
 .form-wrapper {
   width: 100%;
   margin: 0 auto;
@@ -1341,7 +1345,7 @@ footer {
 
 .form-parts {
   color: #fff;
-  margin: 0 auto 30px;
+  margin: 0 auto 32px;
   width: 100%;
 }
 
@@ -1381,16 +1385,12 @@ footer {
 }
 
 .acceptance {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 /* 必須ボタン */
 .must::before {
   content: "※";
-}
-
-.rpg-btn_submit:hover {
-  opacity: .6;
 }
 
 /* contact form7用 */
@@ -1410,7 +1410,7 @@ span.wpcf7-not-valid-tip::before {
   margin: 0;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 575px) {
   .form-wrapper {
     max-width: 600px;
     margin: 0 auto;
