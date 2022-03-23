@@ -1308,19 +1308,30 @@ footer{
 /* プロフィールページ */
 /* -------------------------------------------- */
 .profile-wrapper{
-  margin-bottom: 80px;
+  position: relative;
+  margin: 0 auto 80px;
 }
 
-.profile-sub-title{
-  font-size: 24px;
+.profile__sec-title{
+  font-size: calc(2.5rem + ((1vw - 3.75px) * 7.0303));
   font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: $subColor;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  line-height: 1;
 }
 
 /* 自分について */
 .about{
 
-  /* 自己紹介 */
-  &__text-list:not(:last-child){
+  &__text-lists{
+    // width: 66%;
+  }
+
+  &__text-list{
     margin-bottom: 20px;
   }
 
@@ -1336,10 +1347,11 @@ footer{
   &__list{
     position: relative;
     padding: 0 0 0 1.8em;
+
     &::before{
       content: " ";
       width: 2px;
-      background: #3333;
+      background: #333;
       display: block;
       position: absolute;
       top: 25px;
@@ -1361,7 +1373,7 @@ footer{
       width: 1.5em;
       height: 1.5em;
       border-radius: 50%;
-      background: #808080;
+      background: $accentColor;
       display: block;
       position: absolute;
       top: 0;
@@ -1376,13 +1388,13 @@ footer{
 
 @media (min-width: 575px) {
   .profile-wrapper{
-    margin-bottom: 100px;
+    margin-bottom: 120px;
   }
   
   /* 自分について */
   .about{
   
-    &__text-list:not(:last-child){
+    &__text-list{
       margin-bottom: 30px;
     }
 
@@ -1394,12 +1406,17 @@ footer{
 }
 
 @media (min-width: 1025px){
-  .profile-sub-title{
-    font-size: rem(32);
+  .profile__sec-title{
+    font-size: rem(98);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
   }
 
   /* 自分について */
   .about{
+    &__text-list{
+      width: 66%;
+    }
 
     &__name{
       font-size: rem(24);
