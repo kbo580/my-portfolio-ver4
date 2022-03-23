@@ -51,7 +51,7 @@ header,main,section,footer, div, ul, li, h1,h2,h3{
 
 .inner{
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1100px;
   width: 100%;
   // background-color: rgba(241,92,168,0.2);
   padding: 0 4%;
@@ -103,7 +103,7 @@ section{
 
 @media (min-width: 575px){
   .inner{
-    // padding: 0 50px;
+    padding: 0 50px;
   }
 
   section{
@@ -233,13 +233,6 @@ section{
   outline: none;
   border: 0px solid #000;
   padding: 20px 10px;
-}
-
-.btn::before{
-  // content: "\f0da";
-  // font-weight: 900;
-  // font-family: 'Font Awesome 5 Free';
-  // margin-right: 8px;
 }
 
 .page-heading{
@@ -798,7 +791,7 @@ body.active{
 
   .works-sub-wrapper{
     padding: 50px 100px;
-    max-width: 1100px;
+    max-width: 900px;
   }
 
 }
@@ -1310,6 +1303,7 @@ footer{
 .profile-wrapper{
   position: relative;
   margin: 0 auto 80px;
+  // border: 1px solid #000;
 }
 
 .profile__sec-title{
@@ -1384,6 +1378,20 @@ footer{
   &__content{
     padding: 1.5em 0;
   }
+}
+
+.profile-wrapper--bg{
+  border: 1px solid #000;
+  height: 500px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5))  ,url(../images/kanae.jpg) center/ cover no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.hobby{
+  color: #fff;
+  font-size: 30px;
+
 }
 
 @media (min-width: 575px) {

@@ -37,7 +37,7 @@ img {
 /* font-size */
 .inner {
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1100px;
   width: 100%;
   padding: 0 4%;
 }
@@ -96,6 +96,9 @@ section {
 }
 
 @media (min-width: 575px) {
+  .inner {
+    padding: 0 50px;
+  }
   section {
     padding: 90px 0 150px;
   }
@@ -806,7 +809,7 @@ body.active {
   }
   .works-sub-wrapper {
     padding: 50px 100px;
-    max-width: 1100px;
+    max-width: 900px;
   }
 }
 
@@ -1306,6 +1309,20 @@ footer {
 
 .career__content {
   padding: 1.5em 0;
+}
+
+.profile-wrapper--bg {
+  border: 1px solid #000;
+  height: 500px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url(../images/kanae.jpg) center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url(../images/kanae.jpg) center/cover no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.hobby {
+  color: #fff;
+  font-size: 30px;
 }
 
 @media (min-width: 575px) {
