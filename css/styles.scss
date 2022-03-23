@@ -196,47 +196,50 @@ section{
 /* ボタン */
 .btn-wrapper{
   text-align: center;
+  border: 2px solid #333333;
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+
+  &::after{
+    content: "";
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 5px;
+    left: 5px;
+    transition: .4s;
+    background-color: $accentColor;
+  }
+
+  &:hover:after {
+    top: 0;
+    left: 0;
+  }
+
 }
 
+/*ボタンの中身*/
 .btn{
-  min-width: 200px;
-  text-align: center;
-  padding: 20px 10px;
-  cursor: pointer;
-  // transition: all 4s ease;
-  font-weight: bold;
-  position: relative;
-  display: inline-block;
-  outline: none;
-  border: 2px solid #333333;
   background: transparent;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  font-weight: bold;
   line-height: 1;
   font-size: rem(16);
+  display: inline-block;
+  outline: none;
+  border: 0px solid #000;
+  padding: 20px 10px;
 }
 
-.btn::before,
-.works__more-btn::before{
-  content: "\f0da";
-  font-weight: 900;
-  font-family: 'Font Awesome 5 Free';
-  margin-right: 8px;
-}
-
-.btn::after{
-  content: "";
-  width: 100%;
-  z-index: -1;
-  position: absolute;
-  height: 100%;
-  top: 5px;
-  left: 5px;
-  transition: .4s;
-  background-color: $accentColor;
-}
-
-.btn:hover:after {
-  top: 0;
-  left: 0;
+.btn::before{
+  // content: "\f0da";
+  // font-weight: 900;
+  // font-family: 'Font Awesome 5 Free';
+  // margin-right: 8px;
 }
 
 .page-heading{
