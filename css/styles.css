@@ -761,6 +761,11 @@ body.active {
   .works__item {
     width: 31%;
   }
+  .works__item-list::after {
+    content: "";
+    display: block;
+    width: 31%;
+  }
   .works__text-wrapper {
     padding: 60px 30px;
     -webkit-box-flex: 1;
@@ -1312,8 +1317,7 @@ footer {
 }
 
 .profile-wrapper--bg {
-  border: 1px solid #000;
-  height: 500px;
+  height: 300px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url(../images/kanae.jpg) center/cover no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.5)), url(../images/kanae.jpg) center/cover no-repeat;
   background-attachment: fixed;
@@ -1322,7 +1326,7 @@ footer {
 
 .hobby {
   color: #fff;
-  font-size: 30px;
+  font-size: calc(1.5rem + ((1vw - 3.75px) * 0.7273));
 }
 
 @media (min-width: 575px) {
@@ -1336,9 +1340,15 @@ footer {
   .about__name {
     margin-bottom: 16px;
   }
+  .profile-wrapper--bg {
+    height: 500px;
+  }
+  .hobby br {
+    display: none;
+  }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1000px) {
   .profile__sec-title {
     font-size: 6.125rem;
     font-family: 'Montserrat', sans-serif;
@@ -1350,6 +1360,12 @@ footer {
   }
   .about__name {
     font-size: 1.5rem;
+  }
+  .hobby {
+    font-size: 30px;
+  }
+  .hobby br {
+    display: none;
   }
 }
 
@@ -1508,6 +1524,40 @@ span.wpcf7-not-valid-tip::before {
   /* 謝罪 */
   .apolo {
     font-size: 3rem;
+  }
+}
+
+/*-------------------------------------------- */
+/* バナー一覧 */
+/* -------------------------------------------- */
+.banners__list {
+  gap: 16px;
+}
+
+.banners__item {
+  width: 100%;
+}
+
+.banners__image-wrapper {
+  aspect-ratio: 6 / 5;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid #dfdfdf;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.banners__image-wrapper:hover {
+  opacity: .8;
+}
+
+@media (min-width: 575px) {
+  .banners__item {
+    width: 31%;
   }
 }
 
