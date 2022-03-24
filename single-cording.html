@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.0/css/all.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 
@@ -12,37 +12,46 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Josefin+Sans&display=swap" rel="stylesheet">
   <title>Yuta Kobayashi's Portfolio</title>
 </head>
 
 <body>
 
   <div class="container">
-    <nav class="sp-nav" id="nav">
-      <ul class="sp-nav-menu">
-        <li class="nav-link"><a href="index.html">HOME</a></li>
-        <li class="nav-link"><a href="works.html" target="_blank" rel="noopener noreferrer">WORKS</a></li>
-        <li class="nav-link"><a href="#skill">SKILLS</a></li>
-        <li class="nav-link"><a href="#profile">PROFILE</a></li>
-        <li class="nav-link"><a href="#contact">CONTACT</a></li>
-        <li class="nav-link"><a href="404.html">BLOG</a></li>
-      </ul>
-    </nav>
-    <!-- /sp-nav -->
 
-    <div id="screen"></div>
+    <header class="sp-header header inner">
+      <h1 class="site-title"><a href="#" class="site-title--link">Yuta Kobayashi's<br>Portfolio</a></h1>
+  
+      <div class="burger" id="show">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <!-- /burger -->
+
+      <nav class="sp-nav" id="nav">
+        <ul class="sp-nav-menu">
+          <li class="nav-link"><a href="index.html">HOME</a></li>
+          <li class="nav-link"><a href="works.html" target="_blank" rel="noopener noreferrer">WORKS</a></li>
+          <li class="nav-link"><a href="">SKILLS</a></li>
+          <li class="nav-link"><a href="profile.html">PROFILE</a></li>
+          <li class="nav-link"><a href="contact.html">CONTACT</a></li>
+          <li class="nav-link"><a href="404.html">BLOG</a></li>
+        </ul>
+      </nav>
+      <!-- /sp-nav -->
+  
+      <div id="screen"></div>
       <!-- /スクリーン -->
 
-    <div class="burger" id="show">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-    <!-- /burger -->
+    </header>
+    <!-- /sp-header -->
 
-    <header class="pc-header">
-      <h2 class="header-site-title"><a href="#" class="header-site-title--link">Yuta Kobayashi's<br> Portfolio</a></h2>
-
+    <header class="pc-header header">
+      <h2 class="site-title"><a href="index.html" class="site-title--link">Yuta Kobayashi's<br>Portfolio</a></h2>
 
       <nav class="pc-nav">
         <ul class="pc-nav-menu">
@@ -164,10 +173,12 @@
 
           <ul class="pagination">
             <!-- <li class="prev"><?php previous_post_link('%link', '<i class="fas fa-angle-left"></i>PREV'); ?></li> -->
-            <li class="prev"><a href="">prev</a></li>
+            <li class="prev"><a href="" class="pagination-link"><i class="fa-solid fa-angle-left"></i>PREV</a></li>
+
+            <li class="to-works"><a href="works.html" class="pagination-link"><i class="fa-solid fa-table-cells-large"></i>制作一覧</a></li>
             
             <!-- <li class="next"><?php next_post_link('%link','NEXT<i class="fas fa-angle-right"></i>'); ?></li> -->
-            <li class="next"><a href="">next</a></li>
+            <li class="next"><a href="" class="pagination-link">NEXT<i class="fa-solid fa-angle-right"></i></a></li>
 
           </ul>
 
