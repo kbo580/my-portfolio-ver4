@@ -8,7 +8,7 @@ $(function(){
     $('#nav').toggleClass('active');
     $('.bar').toggleClass('colorChange');
     $('#screen').fadeToggle();
-    $('body').toggleClass('active');
+    // $('body').toggleClass('active');
   });
   
   $('.sp-nav-menu a').on('click', function () {
@@ -16,7 +16,7 @@ $(function(){
       $('#nav').removeClass('active');
       $('.bar').removeClass('colorChange');
       $('#screen').fadeOut();
-      $('body').removeClass('active');
+      // $('body').removeClass('active');
   });
 
   $('#screen').on('click', function(){
