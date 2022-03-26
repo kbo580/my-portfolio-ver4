@@ -85,10 +85,15 @@ body{
   width: 100%
 }
 
-section{
+.top-page-sec{
+  border: 3px solid #000;
   width: 100%;
   padding: 60px 0 120px;
   position: relative; 
+}
+
+.page-sec{
+  padding: 90px 0 120px;
 }
 
 .thumbnail{
@@ -97,17 +102,17 @@ section{
   object-fit: cover;
 }
 
-.page-sec{
-
-}
-
 @media (min-width: 575px){
   .inner{
     padding: 0 50px;
   }
 
-  section{
+  .top-page-sec{
     padding: 90px 0 150px;
+  }
+  
+  .page-sec{
+    padding: 120px 0 150px;
   }
 }
 
@@ -131,7 +136,7 @@ section{
     font-size: rem(16);
   }
 
-  section{
+  .top-page-sec{
     padding: 140px 0 150px;
   }
 }
@@ -237,7 +242,8 @@ section{
 
 .page-heading{
   text-align: center;
-  padding: 0 30px 30px;
+  padding:  0 30px;
+  margin-bottom: 30px;
 }
 
 /* パンクズリスト */
@@ -295,6 +301,11 @@ section{
   .top-page-sec::before{
     height: 140px;
   }
+
+  .page-heading{
+    margin-bottom: 50px;
+  }
+
   /* パンクズリスト */
   .breadcrumbs{
     margin-bottom: 70px;
@@ -317,10 +328,6 @@ section{
   
   .top-page-sec::before{
     height: 210px;
-  }
-
-  .page-heading{
-    padding-bottom: 50px;
   }
 }
 
@@ -345,7 +352,7 @@ section{
 }
 
 .site-title{
-  font-size: rem(20);
+  font-size: rem(18);
 }
 
 /* ハンバーガーメニュー */
@@ -413,7 +420,9 @@ body.active{
 }
 
 @media (min-width: 575px){
-
+  .site-title{
+    font-size: rem(20);
+  }
 }
 
 @media (min-width: 1000px){
@@ -439,7 +448,6 @@ body.active{
 
   /* header内のサイトタイトル */
   .site-title{
-    font-size: rem(20);
     letter-spacing: 0.1em;
     margin-bottom: 80px;
     padding: 0 20px;
@@ -1018,6 +1026,10 @@ footer{
   }
 }
 
+.works-comments{
+  margin-bottom: 64px;
+}
+
 /* サイト名のリンク */
 .cfs-hyperlink{
   color: #1B0DAB;
@@ -1173,6 +1185,10 @@ footer{
     &__list{
       margin-bottom: 32px;
     }
+  }
+
+  .works-comments{
+    margin-bottom: 80px;
   }
 
   /* pcでのイメージ */
