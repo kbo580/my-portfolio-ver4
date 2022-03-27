@@ -7,7 +7,6 @@
   <div class="container">
     <?php get_sidebar(); ?>
     
-
     <div class="main-contents">
       
       <section class="works top-page-sec">
@@ -19,19 +18,27 @@
             <p class="works__text">架空の案件を想定して作成したサイトです。</p>
 
             <ul class="works__item-list">
-  
+            <?php if(have_posts()): while(have_posts()) : the_post(); ?>
+
               <li class="works__item">
-                <a href="<?php echo get_template_directory_uri(); ?>/single.html">
+                <a href="<?php the_permalink(); ?>">
                   <figure class="works__item-image-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/clinic-top.png" alt="のサムネイル" class="works__item-image thumbnail">
+                    <img src="<?php echo CFS()->get('image');?>" class="works__item-image thumbnail">
                   </figure>
                 </a>
   
-                <p class="works__item-title">ttl</p>
+                <p class="works__item-title"><?php the_title()?></p>
               </li>
               <!-- /works__item -->
+              
+              <?php endwhile; ?>
+              <?php else : ?>
+                <p>記事がありません</p>
+              <?php endif; ?>
   
-              <li class="works__item">
+              
+  
+              <!-- <li class="works__item">
                 <a href="#">
                   <figure class="works__item-image-wrapper">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/huvest-top.png" alt=""  class="works__item-image thumbnail">
@@ -39,10 +46,10 @@
                 </a>
   
                 <p class="works__item-title">ttl</p>
-              </li>
+              </li> -->
               <!-- /works__item -->
   
-              <li class="works__item">
+              <!-- <li class="works__item">
                 <a href="#">
                   <figure class="works__item-image-wrapper">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/k-create-screen .png" alt=""  class="works__item-image thumbnail">
@@ -50,7 +57,7 @@
                 </a>
   
                 <p class="works__item-title">ttl</p>
-              </li>
+              </li> -->
               <!-- /works__item -->
   
             </ul>

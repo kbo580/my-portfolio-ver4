@@ -15,6 +15,18 @@ function my_files() {
 }
 add_action('wp_enqueue_scripts', 'my_files');
 
+add_theme_support('title-tag');
+function top_only_title($title) {
+  if (is_home()) {
+      $title['tagline'] = '';
+    }
+  return $title;
+  }
+add_filter('document_title_parts', 'top_only_title');
+
+
+//サムネイルの追加
+add_theme_support('post-thumbnails');
 
 
 

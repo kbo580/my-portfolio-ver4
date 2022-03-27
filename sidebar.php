@@ -27,7 +27,7 @@
     <!-- /sp-header -->
 
     <header class="pc-header header">
-      <h2 class="site-title"><a href="#" class="site-title--link">Yuta Kobayashi's<br>Portfolio</a></h2>
+      <h2 class="site-title"><a href="<?php bloginfo('home') ?>" class="site-title--link">Yuta Kobayashi's<br>Portfolio</a></h2>
 
       <nav class="pc-nav">
         <ul class="pc-nav-menu">
