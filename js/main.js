@@ -1,4 +1,6 @@
-$(function(){
+jQuery(function($){
+
+  $(function(){
 
 // バーガーアイコンをクリックでメニューを表示
   $('#screen').hide();
@@ -73,4 +75,5 @@ $('.slider').on('touchmove', function(event, slick, currentSlide, nextSlide){
 
 
 
+});
 });
