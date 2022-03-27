@@ -719,8 +719,8 @@ body.active {
 /* ドット */
 .slick-dots {
   position: absolute;
-  bottom: 1%;
-  text-align: right;
+  bottom: 1% !important;
+  text-align: right !important;
 }
 
 .blog-pr {
