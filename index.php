@@ -1,9 +1,5 @@
 <?php get_header(); ?>
 
-  <div class="mv">
-    <h1 class="site-title">Yuta Kobayashi's Portfolio</h1>
-  </div>
-
   <div class="container">
     <?php get_sidebar(); ?>
     
@@ -36,35 +32,11 @@
                 <p>記事がありません</p>
               <?php endif; ?>
   
-              
-  
-              <!-- <li class="works__item">
-                <a href="#">
-                  <figure class="works__item-image-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/huvest-top.png" alt=""  class="works__item-image thumbnail">
-                  </figure>
-                </a>
-  
-                <p class="works__item-title">ttl</p>
-              </li> -->
-              <!-- /works__item -->
-  
-              <!-- <li class="works__item">
-                <a href="#">
-                  <figure class="works__item-image-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/k-create-screen .png" alt=""  class="works__item-image thumbnail">
-                  </figure>
-                </a>
-  
-                <p class="works__item-title">ttl</p>
-              </li> -->
-              <!-- /works__item -->
-  
             </ul>
             <!-- /works__items -->
 
             <div class="btn-wrapper">
-              <a href="<?php echo get_template_directory_uri(); ?>/works.html" class="btn">制作物一覧へ</a>
+              <a href="<?php echo home_url(); ?>/works" class="btn">制作物一覧へ</a>
             </div>
           </div>
           <!-- /works__item-wrapper --><!--架空案件-->
@@ -226,7 +198,7 @@
           <!-- /skill-set__wrapper -->
           
           <div class="btn-wrapper">
-            <a href="profile.html" class="btn">プロフィールへ</a>
+            <a href="<?php echo home_url(); ?>/profile" class="btn">プロフィールへ</a>
           </div>
 
         </div>

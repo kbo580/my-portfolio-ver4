@@ -9,13 +9,7 @@
       <section class="single page-sec">
         <h2 class="heading page-heading">WORKS</h2>
     
-        <div class="breadcrumbs">
-          <div class="breadcrumb_inner inner">
-            <span><a href="/">ページ名</a></span> >
-            <span><a href="/">ページ名</a></span> >
-            <span>ページ名</span> 
-          </div>
-        </div>
+        <?php get_template_part('template-parts/breadcrumbs') ?>
         <!-- /breadcrumbs -->
 
         <div class="single__contents-wrapper inner">
@@ -100,7 +94,7 @@
           <ul class="pagination">
             <li class="prev"><?php previous_post_link('%link', '<i class="fas fa-angle-left"></i>PREV'); ?></li>
 
-            <li class="to-works"><a href="works.html" class="pagination-link"><i class="fa-solid fa-table-cells-large"></i>WORKS</a></li>
+            <li class="to-works"><a href="<?php echo home_url(); ?>/works" class="pagination-link"><i class="fa-solid fa-table-cells-large"></i>WORKS</a></li>
             
             <li class="next"><?php next_post_link('%link','NEXT<i class="fas fa-angle-right"></i>'); ?></li>
 

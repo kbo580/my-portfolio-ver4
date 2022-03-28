@@ -27,7 +27,7 @@
     <!-- /sp-header -->
 
     <header class="pc-header header">
-      <h2 class="site-title"><a href="<?php bloginfo('home') ?>" class="site-title--link">Yuta Kobayashi's<br>Portfolio</a></h2>
+      <h2 class="site-title"><a href="<?php echo home_url(); ?>" class="site-title--link">Yuta Kobayashi's<br>Portfolio</a></h2>
 
       <nav class="pc-nav">
         <ul class="pc-nav-menu">
@@ -37,7 +37,7 @@
           <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="profile.html">PROFILE</a></li>
           <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="contact.html">CONTACT</a></li>
           <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="404.html">BLOG</a></li>
-          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="template.html">添付</a></li>
+          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="<?php echo home_url(); ?>/temp">添付</a></li>
         </ul>
 
       </nav>
