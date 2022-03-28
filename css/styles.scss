@@ -1127,7 +1127,6 @@ footer{
       color: #333;
     }
   }
-
 }
 
 .pagination .fa-solid{
@@ -1298,7 +1297,7 @@ footer{
       color: #333;
     }
 
-    &:hover{
+    &:not(.dots):hover{
       background: $accentColor;
       color: #333;
     }

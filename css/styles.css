@@ -1250,7 +1250,7 @@ footer {
   color: #333;
 }
 
-.works__wrapper .pagination .nav-links .page-numbers:hover {
+.works__wrapper .pagination .nav-links .page-numbers:not(.dots):hover {
   background: #ffd54d;
   color: #333;
 }
