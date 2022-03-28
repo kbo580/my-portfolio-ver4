@@ -213,7 +213,7 @@
           <p class="contact-text">お忙しい中ご覧いただきありがとうございます。<br>お仕事の話はもちろん、サイトの感想など何でもお聞かせください。</p>
 
           <div class="btn-wrapper">
-            <a href="contact.html" class="btn">お問い合わせへ</a>
+            <a href="<?php echo home_url(); ?>/contact" class="btn">お問い合わせへ</a>
           </div>
           <!-- /btn-wrapper -->
 

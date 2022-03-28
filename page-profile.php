@@ -3,51 +3,6 @@
 
   <?php get_sidebar(); ?>
 
-    <header class="sp-header header inner">
-      <h1 class="site-title"><a href="#" class="site-title--link">Yuta Kobayashi's<br>Portfolio</a></h1>
-  
-      <div class="burger" id="show">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-      <!-- /burger -->
-
-      <nav class="sp-nav" id="nav">
-        <ul class="sp-nav-menu">
-          <li class="nav-link"><a href="index.html">HOME</a></li>
-          <li class="nav-link"><a href="works.html" target="_blank" rel="noopener noreferrer">WORKS</a></li>
-          <li class="nav-link"><a href="">SKILLS</a></li>
-          <li class="nav-link"><a href="profile.html">PROFILE</a></li>
-          <li class="nav-link"><a href="contact.html">CONTACT</a></li>
-          <li class="nav-link"><a href="404.html">BLOG</a></li>
-        </ul>
-      </nav>
-      <!-- /sp-nav -->
-  
-      <div id="screen"></div>
-      <!-- /スクリーン -->
-
-    </header>
-    <!-- /sp-header -->
-
-    <header class="pc-header header">
-      <h2 class="site-title"><a href="index.html" class="site-title--link">Yuta Kobayashi's<br>Portfolio</a></h2>
-
-      <nav class="pc-nav">
-        <ul class="pc-nav-menu">
-          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="index.html">HOME</a></li>
-          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="works.html">WORKS</a></li>
-          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="#skill">SKILLS</a></li>
-          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="profile.html">PROFILE</a></li>
-          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="contact.html">CONTACT</a></li>
-          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="404.html">BLOG</a></li>
-        </ul>
-
-      </nav>
-    </header>
-    <!-- /pc-header -->
-
     <div class="main-contents">
       <section class="profile page-sec">
         <h2 class="heading page-heading"><span class="jp-title">プロフィール</span>PROFILE</h2>
@@ -131,13 +86,4 @@
   </div>
   <!-- /container -->
 
-  <footer>
-    <p class="copy">&copy;2022 Yuta Kobayashi</p>
-  </footer>  
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="js/main.js"></script>
-</body>
-
-</html>
+  <?php get_footer(); ?>
