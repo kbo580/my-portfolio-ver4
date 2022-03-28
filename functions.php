@@ -17,15 +17,6 @@ function my_files() {
 
 add_action('wp_enqueue_scripts', 'my_files');
 
-// フォントの読み込み
-function fonts() {
-  wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css2?family=DotGothic16&family=Josefin+Sans&display=swap');
-  // wp_enqueue_style('icon', 'https://use.fontawesome.com/releases/v6.1.0/css/all.css');
-  // wp_enqueue_script('script-name', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0',);
-}
-
-add_action('wp_enqueue_scripts', 'fonts');
-
 
 add_theme_support('title-tag');
 function top_only_title($title) {
