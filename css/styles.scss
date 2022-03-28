@@ -225,7 +225,8 @@ body{
 }
 
 /*ボタンの中身*/
-.btn{
+.btn,
+.wpcf7-submit{
   background: transparent;
   height: 100%;
   width: 100%;
@@ -1529,14 +1530,6 @@ footer{
   }
 }
 
-.acceptance{
-  margin-bottom: 80px;
-}
-
-.form-btn-wrapper{
-  
-}
-
 /* 必須ボタン */
 .must::before{
   content: "※";
@@ -1547,17 +1540,24 @@ footer{
 span.wpcf7-not-valid-tip {
   padding-top: 0.5em;
   font-weight: 600;
-  // display: block;
 
   &::before{
     content: "※";
   }
 }
 
+.cf7-submit-btn{
+  margin-top: 80px;
+}
+
 .wpcf7 form .wpcf7-response-output{
   color: #DD3232;
   font-weight: bold;
   margin: 0;
+}
+
+.wpcf7-spinner{
+  display: none;
 }
 
 
@@ -1589,10 +1589,6 @@ span.wpcf7-not-valid-tip {
     input[type="submit"] {
       font-size: 16px;
     }
-  }
-
-  .acceptance{
-    margin-bottom: 80px;
   }
 }
 
