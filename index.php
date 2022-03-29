@@ -49,7 +49,7 @@
             <p class="works__text">コーディングの練習で作成したサイトです。</p>
 
             <div class="link-wrapper">
-              <a href="archive-coding.html" class="more-link right-arrow">もっとみる</a>
+              <a href="<?php echo home_url(); ?>/cording" class="more-link right-arrow">もっとみる</a>
             </div>
             <!-- /link-wrapper -->
           </div>
@@ -58,17 +58,28 @@
           <div class="sliderarea works__image-wrapper">
             <ul class="slider">
 
-              <li class="slider-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/huvest-top.png" alt="模写コーディングその１" class="thumbnail">
-              </li>
+              <!-- サブループ -->
+              <?php 
+                $query = new WP_Query(
+                  array(
+                    'post_type' => 'cording', /* 投稿タイプのスラッグ */
+                    'posts_per_page' => 3, /* １ページあたりの投稿表示数 */
+                  )
+                );
+              ?>
 
-              <li class="slider-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/LP-site.png" alt="模写コーディングその２" class="thumbnail">
-              </li>
+              <?php if($query -> have_posts()) : ?> <!--投稿があれば-->
+              <?php while($query -> have_posts()) : $query -> the_post(); ?> <!--投稿がある分だけ繰り返す-->
+                <li class="slider-item">
+                  <img src="<?php echo CFS()->get('image');?>" class="works__item-image thumbnail">
+                </li>
 
-              <li class="slider-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/k-create-top.png" alt="模写コーディングその３" class="thumbnail">
-              </li>
+              <?php endwhile; ?>
+              <?php wp_reset_postdata(); ?> <!-- 投稿データをリセットする -->
+              <?php else : ?> <!--投稿がなければ「記事がありません」と表示する-->
+                <h2>記事がありません</h2>
+              <?php endif; ?>
+
             </ul>
             <!-- /slider -->
           </div>
@@ -83,7 +94,7 @@
             <p class="works__text">バナー制作の練習です</p>
 
             <div class="link-wrapper">
-              <a href="archive-banner.html" class="more-link right-arrow">もっとみる</a>
+              <a href="<?php echo home_url(); ?>/banners" class="more-link right-arrow">もっとみる</a>
             </div>
             <!-- /link-wrapper -->
           </div>
@@ -92,17 +103,28 @@
           <div class="sliderarea works__image-wrapper">
             <ul class="slider">
 
-              <li class="slider-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/banner-1.jpg" alt="バナー画像" class="thumbnail">
-              </li>
+              <!-- サブループ -->
+              <?php 
+                $query = new WP_Query(
+                  array(
+                    'post_type' => 'banners', /* 投稿タイプのスラッグ */
+                    'posts_per_page' => 3, /* １ページあたりの投稿表示数 */
+                  )
+                );
+              ?>
 
-              <li class="slider-item">
-                <img src="images/picture_pc_a77ed96ca157a057aad04b03a0902114.webp" alt="バナー画像" class="thumbnail">
-              </li>
+              <?php if($query -> have_posts()) : ?> <!--投稿があれば-->
+              <?php while($query -> have_posts()) : $query -> the_post(); ?> <!--投稿がある分だけ繰り返す-->
+                <li class="slider-item">
+                  <img src="<?php echo CFS()->get('banner');?>" class="works__item-image thumbnail">
+                </li>
 
-              <li class="slider-item">
-                <img src="images/picture_pc_0c71e8774d9d87c0fb1c80702846f1a3.webp" alt="バナー画像" class="thumbnail">
-              </li>
+              <?php endwhile; ?>
+              <?php wp_reset_postdata(); ?> <!-- 投稿データをリセットする -->
+              <?php else : ?> <!--投稿がなければ「記事がありません」と表示する-->
+                <h2>記事がありません</h2>
+              <?php endif; ?>
+
             </ul>
             <!-- /slider -->
           </div>
