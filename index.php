@@ -62,21 +62,21 @@
               <?php 
                 $query = new WP_Query(
                   array(
-                    'post_type' => 'cording', /* 投稿タイプのスラッグ */
-                    'posts_per_page' => 3, /* １ページあたりの投稿表示数 */
+                    'post_type' => 'cording', 
+                    'posts_per_page' => 3, 
                   )
                 );
               ?>
 
-              <?php if($query -> have_posts()) : ?> <!--投稿があれば-->
-              <?php while($query -> have_posts()) : $query -> the_post(); ?> <!--投稿がある分だけ繰り返す-->
+              <?php if($query -> have_posts()) : ?> 
+              <?php while($query -> have_posts()) : $query -> the_post(); ?> 
                 <li class="slider-item">
                   <img src="<?php echo CFS()->get('image');?>" class="works__item-image thumbnail">
                 </li>
 
               <?php endwhile; ?>
-              <?php wp_reset_postdata(); ?> <!-- 投稿データをリセットする -->
-              <?php else : ?> <!--投稿がなければ「記事がありません」と表示する-->
+              <?php wp_reset_postdata(); ?> <
+              <?php else : ?> 
                 <h2>記事がありません</h2>
               <?php endif; ?>
 
@@ -107,21 +107,21 @@
               <?php 
                 $query = new WP_Query(
                   array(
-                    'post_type' => 'banners', /* 投稿タイプのスラッグ */
-                    'posts_per_page' => 3, /* １ページあたりの投稿表示数 */
+                    'post_type' => 'banners',
+                    'posts_per_page' => 3, 
                   )
                 );
               ?>
 
-              <?php if($query -> have_posts()) : ?> <!--投稿があれば-->
-              <?php while($query -> have_posts()) : $query -> the_post(); ?> <!--投稿がある分だけ繰り返す-->
+              <?php if($query -> have_posts()) : ?> 
+              <?php while($query -> have_posts()) : $query -> the_post(); ?> 
                 <li class="slider-item">
                   <img src="<?php echo CFS()->get('banner');?>" class="works__item-image thumbnail">
                 </li>
 
               <?php endwhile; ?>
-              <?php wp_reset_postdata(); ?> <!-- 投稿データをリセットする -->
-              <?php else : ?> <!--投稿がなければ「記事がありません」と表示する-->
+              <?php wp_reset_postdata(); ?> <
+              <?php else : ?>
                 <h2>記事がありません</h2>
               <?php endif; ?>
 
@@ -136,11 +136,14 @@
         <div class="inner">
           <p class="blog-pr">学習のアウトプットのために<br><span class="blog-pr--under-line">ブログも書いております</span></p>
           
-          <p class="blog-banner">
-            <a href="#">
+          <div class="blog-banner">
+            <a href="https://kbyt-programming.com/" target="_blank" rel="noopener noreferrer">
               <img src="<?php echo get_template_directory_uri(); ?>/images/blog-image.png" alt="" class="thumbnail">
             </a>
-          </p>
+            <p class="click-open">外部リンクに移行します</p>
+          </div>
+          <!-- /blog-banner -->
+        </div>
         <!-- /inner -->
         
       </section>

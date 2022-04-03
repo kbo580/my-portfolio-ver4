@@ -17,7 +17,7 @@ function my_files() {
 
 add_action('wp_enqueue_scripts', 'my_files');
 
-
+//タイトルタグの取得
 add_theme_support('title-tag');
 function top_only_title($title) {
   if (is_home()) {
@@ -31,6 +31,7 @@ add_filter('document_title_parts', 'top_only_title');
 //サムネイルの追加
 add_theme_support('post-thumbnails');
 
+//アーカイブページの作成
 function post_has_archive($args, $post_type){
   if('post'== $post_type){
     $args['rewrite']=true;
@@ -42,13 +43,19 @@ function post_has_archive($args, $post_type){
 
 add_filter('register_post_type_args', 'post_has_archive', 10, 2);
 
-/* 特定のページの１ページあたりの表示数を変更する */
+//それぞれのアーカイブページの表示数
 function change_posts_per_page($query) {
-  if ( is_admin() || ! $query->is_main_query() ) /* メインクエリでの表示数 */
+  if ( is_admin() || ! $query->is_main_query() ) 
       return;
-  if ( $query->is_archive() ) { //アーカイブページの場合
-      $query->set( 'posts_per_page', '6' ); /* 表示件数を指定する。-1で全件表示できる */
+
+  if ( $query->is_archive() ) { 
+    $query->set( 'posts_per_page', '6' ); 
   }
+
+  if ( $query->is_post_type_archive('banners') ) { 
+    $query->set( 'posts_per_page', '-1' ); 
+  }
+
 }
 add_action( 'pre_get_posts', 'change_posts_per_page' );
 

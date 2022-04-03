@@ -1,8 +1,7 @@
 jQuery(function($){
-
   $(function(){
 
-// バーガーアイコンをクリックでメニューを表示
+  // バーガーアイコンをクリックでメニューを表示
   $('#screen').hide();
 
   $('#show').on('click', function(){
@@ -53,27 +52,37 @@ jQuery(function($){
   });
 
 	$('.slider').slick({
-		// fade:true,//切り替えをフェードで行う。初期値はfalse。
-		// autoplay: true,//自動的に動き出すか。初期値はfalse。
-		// autoplaySpeed: 3000,//次のスライドに切り替わる待ち時間
-		// speed:1000,//スライドの動きのスピード。初期値は300。
-		// infinite: true,//スライドをループさせるかどうか。初期値はtrue
 		arrows: true,
 		prevArrow: '<div class="prev-arrow"></div>',
 		nextArrow: '<div class="next-arrow"></div>',
 		dots: true,
-    //     pauseOnFocus: false,//フォーカスで一時停止を無効
-    //     pauseOnHover: false,//マウスホバーで一時停止を無効
-    //     pauseOnDotsHover: false,//ドットナビゲーションをマウスホバーで一時停止を無効
-});
+  });
 
-//スマホ用：スライダーをタッチしても止めずにスライドをさせたい場合
-$('.slider').on('touchmove', function(event, slick, currentSlide, nextSlide){
-    // $('.slider').slick('slickPlay');
-});
+  var movefun = function( event ){
+    event.preventDefault();
+  }
+
+  //バナー一覧のモーダル
+  $('#modal-wrapper').hide();
+
+  $('.banners__item > a').on('click', function(){
+    var src = $(this).find('img').attr('src');
+    var alt = $(this).find('img').attr('alt');
+    $('#modal-image-wrapper > img').attr('src', src).attr('alt', alt);
+    $('#modal-wrapper').fadeIn(600);
+    $('body').addClass('fixed');
+    window.addEventListener( 'touchmove' , movefun , { passive: false } );
+    return false;
+  });
+
+  $('#modal-wrapper').on('click', function(){
+    $('#modal-wrapper').fadeOut(600); 
+    $('body').removeClass('fixed');
+    window.removeEventListener( 'touchmove' , movefun, { passive: false }   );
+  });
 
 
 
 
-});
+  });
 });

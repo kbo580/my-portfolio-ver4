@@ -438,7 +438,7 @@ body.active{
     align-items: center;
     background-color: rgb(203, 203, 211);
     background-color: #F3F3F3;
-    padding-top: 90px;
+    padding-top: 160px;
     width: 250px;
     height: 100vh;
     position: -webkit-sticky;
@@ -462,6 +462,9 @@ body.active{
 /* -------------------------------------------- */
 /* ナビメニュー関連 */
 /* -------------------------------------------- */
+.fa-up-right-from-square{
+  margin-left: 5px;
+}
 /* スマホのナビメニュー全体 */
 .sp-nav{
   background-color: rgba(0, 0, 0, 0.6);
@@ -1110,7 +1113,6 @@ footer{
   display: flex;
   justify-content: space-between;
   min-width: 270px;
-  max-width: 400px;
   width: 60%;
   margin: 0 auto;
 }
@@ -1276,34 +1278,35 @@ footer{
 /* ページネーション */
 .works__wrapper .pagination{
   width: 100%;
-}
-
-.works__wrapper .pagination .nav-links{
-  display: flex;
-  justify-content: space-between;
-  min-width: 270px;
-  width: 100%;
-  margin: 0 auto;
-
-  /* 数字のリンク */
-  .page-numbers{
-    display: inline-block;
-    border-radius: 4px;
-    padding: 0 0.5em;
-    transition: .3s;
-
-    /* 現在のページ */
-    &.current{
-      background-color: $accentColor;
-      color: #333;
-    }
-
-    &:not(.dots):hover{
-      background: $accentColor;
-      color: #333;
-    }
-  }
+  .nav-links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 270px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 6px;
   
+    /* 数字のリンク */
+    .page-numbers{
+      display: inline-block;
+      border-radius: 4px;
+      padding: 0 0.5em;
+      transition: .3s;
+  
+      /* 現在のページ */
+      &.current{
+        background-color: $accentColor;
+        color: #333;
+      }
+  
+      &:not(.dots):hover{
+        background: $accentColor;
+        color: #333;
+      }
+    }
+    
+  }
 }
 
 @media (min-width: 575px){
@@ -1314,6 +1317,13 @@ footer{
   .works{
     .pagination{
       margin-bottom: 80px;
+    }
+  }
+
+  .works__wrapper .pagination{
+    width: 100%;
+    .nav-links{
+      gap: 12px;
     }
   }
 }
@@ -1642,7 +1652,7 @@ span.wpcf7-not-valid-tip {
 }
 
 /*-------------------------------------------- */
-/* バナー一覧 */
+/* バナー一覧(archive-banner) */
 /* -------------------------------------------- */
 .banners{
 
@@ -1656,12 +1666,7 @@ span.wpcf7-not-valid-tip {
   
   &__image-wrapper{
     aspect-ratio: 6 / 5;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
     margin-bottom: 16px;
-    border: 1px solid #dfdfdf;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     transition: all .4s;
 
     &:hover{
@@ -1669,6 +1674,68 @@ span.wpcf7-not-valid-tip {
     }
   }
 
+}
+
+/*モーダル*/
+.modal-wrapper{
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* 閉じるボタン */
+.close{
+  background-color: #ddd;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  z-index: 1;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all .4s;
+}
+
+.close::before,
+.close::after{
+  position: absolute;
+  content: "";
+  border-top: 3px solid #333;
+  width: 20px;
+  top: 50%;
+  left: 50%;
+}
+
+.close::before{
+  transform: translate(-50%, -50%) rotate(
+45deg);
+}
+
+.close::after{
+  transform: translate(-50%, -50%) rotate(
+-45deg);
+}
+
+.modal-image-wrapper{
+  width: 70%;
+}
+
+/*モーダルの中の画像*/
+.modal-image-wrapper img{
+  max-width: 70%;
+  max-height: 70%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 @media (min-width: 575px){
@@ -1679,8 +1746,6 @@ span.wpcf7-not-valid-tip {
     }
   }
 }
-
-
 
 @media (min-width: 1000px){
 

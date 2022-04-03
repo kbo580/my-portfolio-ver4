@@ -463,7 +463,7 @@ body.active {
             align-items: center;
     background-color: #cbcbd3;
     background-color: #F3F3F3;
-    padding-top: 90px;
+    padding-top: 160px;
     width: 250px;
     height: 100vh;
     position: -webkit-sticky;
@@ -485,6 +485,10 @@ body.active {
 /* -------------------------------------------- */
 /* ナビメニュー関連 */
 /* -------------------------------------------- */
+.fa-up-right-from-square {
+  margin-left: 5px;
+}
+
 /* スマホのナビメニュー全体 */
 .sp-nav {
   background-color: rgba(0, 0, 0, 0.6);
@@ -1111,7 +1115,6 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-width: 270px;
-  max-width: 400px;
   width: 60%;
   margin: 0 auto;
 }
@@ -1228,12 +1231,15 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   min-width: 270px;
   width: 100%;
   margin: 0 auto;
+  gap: 6px;
   /* 数字のリンク */
 }
 
@@ -1262,6 +1268,12 @@ footer {
   }
   .works .pagination {
     margin-bottom: 80px;
+  }
+  .works__wrapper .pagination {
+    width: 100%;
+  }
+  .works__wrapper .pagination .nav-links {
+    gap: 12px;
   }
 }
 
@@ -1550,7 +1562,7 @@ span.wpcf7-not-valid-tip::before {
 }
 
 /*-------------------------------------------- */
-/* バナー一覧 */
+/* バナー一覧(archive-banner) */
 /* -------------------------------------------- */
 .banners__list {
   gap: 16px;
@@ -1562,19 +1574,78 @@ span.wpcf7-not-valid-tip::before {
 
 .banners__image-wrapper {
   aspect-ratio: 6 / 5;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
   margin-bottom: 16px;
-  border: 1px solid #dfdfdf;
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   -webkit-transition: all .4s;
   transition: all .4s;
 }
 
 .banners__image-wrapper:hover {
   opacity: .8;
+}
+
+/*モーダル*/
+.modal-wrapper {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* 閉じるボタン */
+.close {
+  background-color: #ddd;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  z-index: 1;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.close::before,
+.close::after {
+  position: absolute;
+  content: "";
+  border-top: 3px solid #333;
+  width: 20px;
+  top: 50%;
+  left: 50%;
+}
+
+.close::before {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close::after {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.modal-image-wrapper {
+  width: 70%;
+}
+
+/*モーダルの中の画像*/
+.modal-image-wrapper img {
+  max-width: 70%;
+  max-height: 70%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 @media (min-width: 575px) {

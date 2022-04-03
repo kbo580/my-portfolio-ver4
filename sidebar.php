@@ -1,5 +1,5 @@
 <header class="sp-header header inner">
-      <h1 class="site-title"><a href="#" class="site-title--link">Yuta Kobayashi's<br>Portfolio</a></h1>
+      <h1 class="site-title"><a href="<?php echo home_url(); ?>" class="site-title--link">Yuta Kobayashi's<br>Portfolio</a></h1>
   
       <div class="burger" id="show">
         <div class="bar"></div>
@@ -10,12 +10,17 @@
 
       <nav class="sp-nav" id="nav">
         <ul class="sp-nav-menu">
-          <li class="nav-link"><a href="index.html">HOME</a></li>
-          <li class="nav-link"><a href="works.html" target="_blank" rel="noopener noreferrer">WORKS</a></li>
-          <li class="nav-link"><a href="">SKILLS</a></li>
-          <li class="nav-link"><a href="profile.html">PROFILE</a></li>
-          <li class="nav-link"><a href="contact.html">CONTACT</a></li>
-          <li class="nav-link"><a href="404.html">BLOG</a></li>
+          <li class="nav-link"><a href="<?php echo home_url(); ?>">HOME</a></li>
+
+          <li class="nav-link"><a href="<?php echo home_url(); ?>/works">WORKS</a></li>
+
+          <li class="nav-link"><a href="<?php echo home_url(); ?>/banners">BANNERS</a></li>
+
+          <li class="nav-link"><a href="<?php echo home_url(); ?>/profile">PROFILE</a></li>
+
+          <li class="nav-link"><a href="<?php echo home_url(); ?>/contact">CONTACT</a></li>
+
+          <li class="nav-link"><a href="https://kbyt-programming.com/" target="_blank" rel="noopener noreferrer">BLOG<i class="fa-solid fa-up-right-from-square"></i></a></li>
         </ul>
       </nav>
       <!-- /sp-nav -->
@@ -31,13 +36,18 @@
 
       <nav class="pc-nav">
         <ul class="pc-nav-menu">
-          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="index.html">HOME</a></li>
-          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="works.html">WORKS</a></li>
-          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="#skill">SKILLS</a></li>
-          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="profile.html">PROFILE</a></li>
-          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="contact.html">CONTACT</a></li>
-          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="404.html">BLOG</a></li>
-          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="<?php echo home_url(); ?>/temp">添付</a></li>
+          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="<?php echo home_url(); ?>">HOME</a></li>
+
+          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="<?php echo home_url(); ?>/works">WORKS</a></li>
+
+          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="<?php echo home_url(); ?>/banners">BANNERS</a></li>
+
+          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="<?php echo home_url(); ?>/profile">PROFILE</a></li>
+
+          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="<?php echo home_url(); ?>/contact">CONTACT</a></li>
+
+          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="https://kbyt-programming.com/" target="_blank" rel="noopener noreferrer">BLOG<i class="fa-solid fa-up-right-from-square"></i></a></li>
+
         </ul>
 
       </nav>

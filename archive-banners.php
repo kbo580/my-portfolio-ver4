@@ -12,13 +12,13 @@
 
         <div class="works__wrapper inner">
 
-          <ul class="works__item-list">
+          <ul class="works__item-list banners__list">
             <?php if(have_posts()): while(have_posts()) : the_post(); ?>
 
-            <li class="works__item">
-              <a href="<?php the_permalink(); ?>">
-                <figure class="works__item-image-wrapper">
-                  <img src="<?php echo CFS()->get('banner');?>" class="works__item-image thumbnail">
+            <li class="banners__item">
+              <a href="#">
+                <figure class="banners__image-wrapper">
+                  <img src="<?php echo CFS()->get('banner');?>" alt="<?php the_title()?>" class="banner__item-image thumbnail">
                 </figure>
               </a>
 
@@ -32,6 +32,16 @@
 
           </ul>
           <!-- /works__item-list -->
+          
+          <!-- モーダル -->
+          <div class="modal-wrapper" id="modal-wrapper">
+            <div class="close" id="close"></div>
+            
+            <div id="modal-image-wrapper" class="modal-image-wrapper">
+              <img src="" alt="">  
+            </div>
+          </div>
+          <!-- /モーダル -->
 
           <?php
           $args = array(
