@@ -126,6 +126,29 @@ jQuery(function($){
   });
 
 
+  //「topへ戻る」関連
+  //メインビジュアルの高さを取得して変数にする
+  var mvHight = $('.mv').outerHeight(true);
+  $(window).scroll(function(){
+    if($(this).scrollTop()>mvHight){
+      $('#page-top').fadeIn(400);
+    }
+    else{
+      $('#page-top').fadeOut(400);
+    }
+  });
+
+  $('#page-top').click(function(){ 
+    $('html,body').animate({'scrollTop':0},600);
+      $(this).animate({'bottom':'10%'},300,function(){
+      $(this).animate({'bottom': '5%'},300)
+    });
+    return false;
+  });
+
+
+
+
 
 
   });

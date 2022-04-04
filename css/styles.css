@@ -273,7 +273,7 @@ body {
           align-items: center;
 }
 
-.breadcrumbs .breadcrumb_inner .fa-angle-right {
+.breadcrumbs .breadcrumb_inner .fa-caret-right {
   padding: 0 0.5em;
 }
 
@@ -328,6 +328,15 @@ body {
   margin: 0 auto 10px;
 }
 
+.page-top {
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+}
+
 @media (min-width: 575px) {
   .section-heading {
     margin-bottom: 90px;
@@ -341,6 +350,10 @@ body {
   /* パンクズリスト */
   .breadcrumbs {
     margin-bottom: 70px;
+  }
+  .page-top {
+    width: 50px;
+    height: 50px;
   }
 }
 

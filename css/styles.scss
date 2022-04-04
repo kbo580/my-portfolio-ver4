@@ -264,7 +264,7 @@ body{
     flex-wrap: wrap;
     align-items: center;
 
-    .fa-angle-right {
+    .fa-caret-right {
       padding: 0 0.5em;
     }
   
@@ -314,6 +314,15 @@ body{
   margin: 0 auto 10px;
 }
 
+.page-top{
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+}
+
 @media (min-width: 575px){
   .section-heading{
     margin-bottom: 90px;
@@ -332,7 +341,14 @@ body{
     margin-bottom: 70px;
   }
 
+  .page-top{
+    width: 50px;
+    height: 50px;
+  }
+
 }
+
+
 @media (min-width: 1000px){
   .heading{
     font-size: rem(90);
