@@ -56,7 +56,7 @@
                 $fields = $cfs->get('point-list'); 
                 foreach ((array)$fields as $field) :
                 ?>
-                <li class="single__list-content">
+                <li class="single__list-content single__point">
                   <?php echo $field['point']; ?>
                 </li>
                 <?php endforeach; ?>
