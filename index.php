@@ -182,21 +182,21 @@
 
             <div class="skills-container flex">
               <ul class="skills__item-lists">
-                <li class="skill-list skill-list__image-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/design.png" alt="Webデザイン" class="thumbnail"></li>
+                <li class="skill-list skill-list__image-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/skills-03.png" alt="Webデザイン" class="thumbnail"></li>
                 <li class="skill-list skill-list__title">Webデザイン</li>
                 <li class="skill-list skill-list__text">サイトの設計、デザインを作成し、それをもとにWebサイトの製作ができます。またタブレットやスマートフォンに対応させたレスポンシブデザインもできます。</li>
               </ul>
               <!-- /skill__lists -->
     
               <ul class="skills__item-lists">
-                <li class="skill-list skill-list__image-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/作成中.png" alt="コーディング" class="thumbnail"></li>
+                <li class="skill-list skill-list__image-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/skills-02.png" alt="コーディング" class="thumbnail"></li>
                 <li class="skill-list skill-list__title">コーディング</li>
                 <li class="skill-list skill-list__text">ワイヤーフレームをもとに忠実に再現をし、様々な動きやエフェクトをつけることができます。またメンテナンスがしやすく見やすいコードを書くように努めています。</li>
               </ul>
               <!-- /skills__item-lists -->
     
               <ul class="skills__item-lists">
-                <li class="skill-list skill-list__image-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/design.png" alt="CMS化" class="thumbnail"></li>
+                <li class="skill-list skill-list__image-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/skills-01.png" alt="CMS化" class="thumbnail"></li>
                 <li class="skill-list skill-list__title">CMS化</li>
                 <li class="skill-list skill-list__text">Word Pressなどに代表されるものでHTMLとCSSで作成されたサイトを自身で容易に管理、更新ができるようなサイトに変更することができます。</li>
               </ul>
