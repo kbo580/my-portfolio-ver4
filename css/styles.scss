@@ -1020,6 +1020,7 @@ body.active{
 .skills{
   // background-color: $mainColor;
 }
+
 .skills-wrapper{
   margin-bottom: 48px;
 }
@@ -1052,16 +1053,15 @@ body.active{
 .skill-list{
 
   &__image-wrapper{
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 3 / 2;
     overflow: hidden;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
   }
 
   &__title{
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 8px;
-
   }
   
   &__text{
@@ -1096,7 +1096,7 @@ body.active{
 
 @media (min-width: 575px){
   .skills-wrapper{
-    margin-bottom: 80px;
+    margin-bottom: 120px;
   }
 
   /* 上の段 */

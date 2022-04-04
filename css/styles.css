@@ -1120,9 +1120,9 @@ body.active {
 
 /* スキルのリスト */
 .skill-list__image-wrapper {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .skill-list__title {
@@ -1158,7 +1158,7 @@ body.active {
 
 @media (min-width: 575px) {
   .skills-wrapper {
-    margin-bottom: 80px;
+    margin-bottom: 120px;
   }
   /* 上の段 */
   .skills__item-lists {
