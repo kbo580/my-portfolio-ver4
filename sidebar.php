@@ -1,5 +1,5 @@
 <header class="sp-header header inner">
-      <h1 class="site-title"><a href="<?php echo home_url(); ?>" class="site-title--link">Yuta Kobayashi's<br>Portfolio</a></h1>
+      <h1 class="site-title nav-site-title"><a href="<?php echo home_url(); ?>" class="site-title--link">Yuta Kobayashi's<br>Portfolio</a></h1>
   
       <div class="burger" id="show">
         <div class="bar"></div>
@@ -32,7 +32,7 @@
     <!-- /sp-header -->
 
     <header class="pc-header header">
-      <h2 class="site-title"><a href="<?php echo home_url(); ?>" class="site-title--link">Yuta Kobayashi's<br>Portfolio</a></h2>
+      <h2 class="site-title nav-site-title"><a href="<?php echo home_url(); ?>" class="site-title--link">Yuta Kobayashi's<br>Portfolio</a></h2>
 
       <nav class="pc-nav">
         <ul class="pc-nav-menu">
