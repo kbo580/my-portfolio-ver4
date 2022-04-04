@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.0/css/all.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.scss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Josefin+Sans&display=swap" rel="stylesheet">
+  <title>Yuta Kobayashi's Portfolio</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header class="sp-header header inner">
+      <h1 class="site-title"><a href="#" class="site-title--link">Yuta Kobayashi's<br>Portfolio</a></h1>
+  
+      <div class="burger" id="show">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <!-- /burger -->
+
+      <nav class="sp-nav" id="nav">
+        <ul class="sp-nav-menu">
+          <li class="nav-link"><a href="index.html">HOME</a></li>
+          <li class="nav-link"><a href="works.html" target="_blank" rel="noopener noreferrer">WORKS</a></li>
+          <li class="nav-link"><a href="">SKILLS</a></li>
+          <li class="nav-link"><a href="profile.html">PROFILE</a></li>
+          <li class="nav-link"><a href="contact.html">CONTACT</a></li>
+          <li class="nav-link"><a href="404.html">BLOG</a></li>
+        </ul>
+      </nav>
+      <!-- /sp-nav -->
+  
+      <div id="screen"></div>
+      <!-- /スクリーン -->
+
+    </header>
+    <!-- /sp-header -->
+
+    <header class="pc-header header">
+      <h2 class="site-title"><a href="index.html" class="site-title--link">Yuta Kobayashi's<br>Portfolio</a></h2>
+
+      <nav class="pc-nav">
+        <ul class="pc-nav-menu">
+          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="index.html">HOME</a></li>
+          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="works.html">WORKS</a></li>
+          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="#skill">SKILLS</a></li>
+          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="profile.html">PROFILE</a></li>
+          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="contact.html">CONTACT</a></li>
+          <li class="nav-link"><span class="cursor"><i class="fas fa-caret-right"></i></span><a href="404.html">BLOG</a></li>
+        </ul>
+
+      </nav>
+    </header>
+    <!-- /pc-header -->
+
+    <div class="main-contents">
+
+      <section class="single page-sec">
+        <h2 class="heading page-heading">WORKS</h2>
+    
+        <div class="breadcrumbs">
+          <div class="breadcrumb_inner inner">
+            <span><a href="/">ページ名</a></span> >
+            <span><a href="/">ページ名</a></span> >
+            <span>ページ名</span> 
+          </div>
+        </div>
+        <!-- /breadcrumbs -->
+
+        <div class="single__contents-wrapper inner">
+
+          <h3 class="single__article-title">記事タイトル</h3>
+
+          <figure class="single__image-wrapper">
+            <!-- <img src="<?php echo CFS()->get('screen');?>" class="single-image"> -->
+            <img src="images/k-create-top.png" alt="サムネイル画像" class="single__image thumbnail">
+          </figure>
+  
+          <ul class="single__list">
+            <li class="single__list-title">サイト名</li>
+            <!-- <li class="single__list-content"><a href="#"><?php echo CFS()->get('url');?></a><i class="fas fa-external-link-alt"></i></li> -->
+            <li class="single__list-content"><a href="#">サイトタイトル</a></li>
+          </ul>
+
+          <ul class="single__list">
+            <li class="single__list-title">サイト構成</li>
+            <!-- <li class="single__list-content"><?php echo CFS()->get('structure');?></li> -->
+            <li class="single__list-content">ページ構成</li>
+          </ul>
+  
+          <ul class="single__list">
+            <li class="single__list-title">作成ツールなど</li>
+            <!-- <li class="single__list-content"><?php echo CFS()->get('tools');?></li> -->
+            <li class="single__list-content">html/ css/ jQuery</li>
+          </ul>
+
+          <ul class="single__list">
+            <li class="single__list-title">制作期間</li>
+            <!-- <li class="single__list-content"><?php echo CFS()->get('period');?></li> -->
+            <li class="single__list-content">日数</li>
+          </ul>
+
+          <ul class="single__list">
+            <li class="single__list-title">サイト製作の概要</li>
+            <!-- <li class="single__list-content"><?php echo CFS()->get('about-works');?></li> -->
+            <li class="single__list-content">テキストが入ります。テキストが入ります。。</li>
+          </ul>
+
+          <ul class="single__list">
+            <li class="single__list-title">ゴール</li>
+            <!-- <li class="single__list-content"><?php echo CFS()->get('goal');?></li> -->
+            <li class="single__list-content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</li>
+          </ul>
+
+          <ul class="single__list point-wrapper">
+            <li class="single__list-title">サイト製作のポイントなど</li>
+              <!-- <?php
+                $fields = $cfs->get('point-list'); 
+                foreach ((array)$fields as $field) :
+                ?> -->
+                <!-- <li class="single__list-content"> -->
+                  <!-- <?php echo $field['point']; ?> -->
+              <!-- </li> -->
+                <!-- <?php endforeach; ?> -->
+              <li class="single__list-content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</li>
+          </ul>
+        
+          <ul class="single__list works-comments">
+            <li class="single__list-title">注釈、一言</li>
+            <li class="single__list-content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</li>
+            <!-- <li class="single__list-content"><?php echo CFS()->get('word');?></li> -->
+          </ul>
+
+          <div class="single__site-image-wrapper">
+  
+            <div class="pc-image-wrapper">
+              <div class="toggle-btn" id="pcToggle"><i class="fas fa-desktop"></i>パソコンでのイメージ</div>
+              <p class="click-open">※クリックで開閉できます</p>
+              <div class="pc-image">
+                <!-- <img src="<?php echo CFS()->get('pc-image');?>" alt="<?php the_title(); ?>のpcイメージ画像" loading="lazy"> -->
+                <img src="images/k-create-screen .png" alt="">
+              </div>
+            </div>
+            <!-- /pc-image-wrapper -->
+  
+            <div class="sp-image-wrapper">
+              <div class="toggle-btn" id="spToggle"><i class="fas fa-mobile-alt"></i>スマホでのイメージ</div>
+              <p class="click-open">※クリックで開閉できます</p>
+
+              <div class="sp-image">
+                <!-- <img src="<?php echo CFS()->get('sp-image');?>" alt="<?php the_title(); ?>のスマホイメージ画像" loading="lazy"> -->
+                <img src="images/k-create_sp-screen .png" alt="">
+              </div>
+            </div>
+            <!-- /sp-image-wrapper -->
+
+          </div>
+          <!-- /single__site-image-wrapper -->
+
+          <ul class="pagination">
+            <!-- <li class="prev"><?php previous_post_link('%link', '<i class="fas fa-angle-left"></i>PREV'); ?></li> -->
+            <li class="prev"><a href="" class="pagination-link"><i class="fa-solid fa-angle-left"></i>PREV</a></li>
+
+            <li class="to-works"><a href="works.html" class="pagination-link"><i class="fa-solid fa-table-cells-large"></i>WORKS</a></li>
+            
+            <!-- <li class="next"><?php next_post_link('%link','NEXT<i class="fas fa-angle-right"></i>'); ?></li> -->
+            <li class="next"><a href="" class="pagination-link">NEXT<i class="fa-solid fa-angle-right"></i></a></li>
+
+          </ul>
+
+        </div>
+        <!-- /single__contents-wrapper inner -->
+
+      </section>
+      <!-- /single -->
+
+    </div>
+    <!-- /main-contents -->
+    
+  </div>
+  <!-- /container -->
+
+  <footer>
+    <p class="copy">&copy;2022 Yuta Kobayashi</p>
+  </footer>  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
