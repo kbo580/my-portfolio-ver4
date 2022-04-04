@@ -143,6 +143,12 @@ body{
 /* -------------------------------------------- */
 /* パーツ */
 /* -------------------------------------------- */
+.site-title{
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+
 .heading{
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.1em;
@@ -293,6 +299,21 @@ body{
   position: relative;
 }
 
+/* セリフ */
+.rpg-serif{
+  font-family: 'DotGothic16', sans-serif;
+  font-size: calc(1.125rem + ((1vw - 3.75px) * 1.92));
+  color: #fff;
+  padding: 1.5em 1em;
+}
+
+/* 画像 */
+.kbyt-image{
+  width: 50%;
+  text-align: center;
+  margin: 0 auto 10px;
+}
+
 @media (min-width: 575px){
   .section-heading{
     margin-bottom: 90px;
@@ -329,6 +350,11 @@ body{
   .top-page-sec::before{
     height: 210px;
   }
+
+  /* セリフ */
+  .rpg-serif{
+    font-size: rem(30);
+  }
 }
 
 
@@ -351,7 +377,7 @@ body{
   align-items: center;
 }
 
-.site-title{
+.nav-site-title{
   font-size: rem(18);
 }
 
@@ -420,7 +446,7 @@ body.active{
 }
 
 @media (min-width: 575px){
-  .site-title{
+  .nav-site-title{
     font-size: rem(20);
   }
 }
@@ -447,11 +473,10 @@ body.active{
   }
 
   /* header内のサイトタイトル */
-  .site-title{
-    letter-spacing: 0.1em;
+  .nav-site-title{
     margin-bottom: 80px;
     padding: 0 20px;
-    line-height: 1.5;
+    
 
     &--link{
       display: inline-block;
@@ -520,9 +545,37 @@ body.active{
 /* メインビジュアル */
 /* -------------------------------------------- */
 .mv{
-  // padding-top: 60px;
   height: 100vh;
-  // background: url('../images/AdobeStock_372717887.jpeg') center / cover no-repeat;
+  position: relative;
+
+  &__site-title{
+    font-size: calc(2rem + ((1vw - 3.75px) * 2.7586));
+    position: absolute;
+    color: #fff;
+    top: -24%;
+  }
+  
+  &__rpg-wrapper{
+    background-color: #000;
+    width: 100%;
+    padding: 60px 0 20px;
+  }
+
+  &__rpg-frame{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  &__rpg-serif{
+    font-size: rem(20);
+    padding: 1em 0.8em;
+    min-height: 140px;
+  }
+
+  &__kbyat-image{
+    width: 100px;
+  }
 }
 
 .mv::before{
@@ -533,12 +586,140 @@ body.active{
 	z-index:-1;
 	width:100%;
 	height: 100vh;
-	background:url("../images/AdobeStock_372717887.jpeg") no-repeat center;
+	background:linear-gradient(rgba(0, 0, 0, 0.2)), url("../images/mv.jpeg") no-repeat center;
 	background-size:cover;
 }
 
+.mv-wrapper{
+  // border: 1px solid #000;
+  max-width: 1100px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* タイピング */
+.TextTyping span {
+	display: none;
+  color: #fff;
+}
+
+.TextTyping::after {
+  content: "|";
+	animation: typinganime .8s ease infinite;
+  color: #fff;
+}
+
+@keyframes typinganime{
+	from{opacity:0}
+	to{opacity:1}
+}
+
+/* スクロール */
+.scrolldown{
+  position:absolute;
+  bottom:10px;
+  left:50%;
+}
+
+.scrolldown span{
+  position: absolute;
+  left:10px;
+  bottom:10px;
+  color: #eee;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+.scrolldown:before {
+  content: "";
+  position: absolute;
+  bottom:0;
+  left:-4px;
+  width:10px;
+  height:10px;
+  border-radius: 50%;
+  background: $accentColor;
+  animation:
+  circlemove 1.6s ease-in-out infinite,
+  cirlemovehide 1.6s ease-out infinite;
+}
+
+@keyframes circlemove{
+  0%{bottom:45px;}
+  100%{bottom:-5px;}
+}
+
+@keyframes cirlemovehide{
+  0%{opacity:0}
+  50%{opacity:1;}
+  80%{opacity:0.9;}
+  100%{opacity:0;}
+}
+
+.scrolldown:after{
+  content:"";
+  position: absolute;
+  bottom:0;
+  left:0;
+  width:2px;
+  height: 50px;
+  background:#eee;
+  }
+
+@media (min-width: 575px){
+  .mv{
+    &__site-title{
+      top: 32%;
+      top: 0;
+    }
+
+    &__rpg-serif{
+      min-height: 110px;
+    }
+
+    &__rpg-wrapper{
+      width: 60%;
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
 @media (min-width: 1000px){
-  
+  .mv{
+    &__site-title{
+      font-size: rem(52);
+      top: 32%;
+    }
+
+    &__rpg-wrapper{
+      width: 60%;
+      padding: 100px 0 20px;
+    }
+
+    &__rpg-frame{
+      width: 85%;
+    }
+
+
+    &__kbyat-image{
+      width: 145px;
+    }
+  }
+
+  .br{
+    display: none;
+  }
 }
 
 /*-------------------------------------------- */
@@ -1624,27 +1805,7 @@ span.wpcf7-not-valid-tip {
   }
 }
 
-/* 画像 */
-.kbyt-image{
-  width: 50%;
-  text-align: center;
-  margin: 0 auto 10px;
-}
-
-/* セリフ */
-.rpg-serif{
-  font-family: 'DotGothic16', sans-serif;
-  font-size: calc(1.125rem + ((1vw - 3.75px) * 1.92));
-  color: #fff;
-  padding: 1.5em 1em;
-}
-
 @media (min-width: 1000px){
-  /* セリフ */
-  .rpg-serif{
-    font-size: rem(30);
-  }
-
   /* 謝罪 */
   .apolo{
     font-size: rem(48);
