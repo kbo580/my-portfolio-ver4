@@ -1,5 +1,29 @@
 <?php get_header(); ?>
 
+  <div class="mv">
+    <div class="mv-wrapper">
+      <h1 class="site-title mv__site-title">Yuta<br class="br"> Kobayashi's<br>Portfolio</h1>
+
+      <div class="mv__rpg-wrapper">
+        <figure class="kbyt-image mv__kbyat-image">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/kbyt.png" alt="こばゆたくん">
+        </figure>
+
+        <div class="rpg-frame mv__rpg-frame">
+          <p class="rpg-serif mv__rpg-serif rpg-border TextTyping">ポートフォリオ を ご覧いただきありがとうございます</p>
+        </div>
+        <!-- /rpg-frame -->
+      </div>
+      <!-- /mv__rpg-wrapper -->
+
+    </div>
+    <!-- /mv-wrapper -->
+
+    <div class="scrolldown"><span>Scroll</span></div>
+
+  </div>
+  <!-- /mv -->
+
   <div class="container">
     <?php get_sidebar(); ?>
     
