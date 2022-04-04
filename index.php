@@ -164,7 +164,7 @@
             <a href="https://kbyt-programming.com/" target="_blank" rel="noopener noreferrer">
               <img src="<?php echo get_template_directory_uri(); ?>/images/blog-image.png" alt="" class="thumbnail">
             </a>
-            <p class="click-open">外部リンクに移行します</p>
+            <p class="click-open">外部サイトに移行します</p>
           </div>
           <!-- /blog-banner -->
         </div>
