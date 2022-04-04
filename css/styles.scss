@@ -1222,6 +1222,13 @@ footer{
 
   &__list-content{
     color: #333;
+
+  }
+  
+  &__point{
+    &::before{
+      content: "・";
+    }
   }
 }
 

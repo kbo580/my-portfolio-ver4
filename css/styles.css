@@ -1270,6 +1270,10 @@ footer {
   color: #333;
 }
 
+.single__point::before {
+  content: "・";
+}
+
 .works-comments {
   margin-bottom: 64px;
 }
