@@ -59,6 +59,17 @@ function change_posts_per_page($query) {
 }
 add_action( 'pre_get_posts', 'change_posts_per_page' );
 
+//パンクズにアーカイブページを追加
+function bcn_add($bcnObj) {
+	if (is_post_type_archive('post')) {
+		$bcnObj->add(new bcn_breadcrumb('<i class="fa fa-folder"></i>製作物一覧', null, array('archive', 'post-clumn-archive', 'current-item')));
+		$trail_tmp = clone $bcnObj->trail[1];
+		$bcnObj->trail[1] = clone $bcnObj->trail[0];
+		$bcnObj->trail[0] = $trail_tmp;
+	}
+	return $bcnObj;
+}
+add_action('bcn_after_fill', 'bcn_add');
 
 
 
