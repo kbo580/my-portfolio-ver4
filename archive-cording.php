@@ -18,7 +18,7 @@
             <li class="works__item">
               <a href="<?php the_permalink(); ?>">
                 <figure class="works__item-image-wrapper">
-                  <img src="<?php echo CFS()->get('image');?>" class="works__item-image thumbnail">
+                  <img src="<?php echo CFS()->get('image');?>"  alt="<?php the_title(); ?>" loading="lazy" class="works__item-image thumbnail">
                 </figure>
               </a>
 

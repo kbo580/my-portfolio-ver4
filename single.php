@@ -19,7 +19,7 @@
 
           <!-- サムネイル -->
           <figure class="single__image-wrapper">
-            <img src="<?php echo CFS()->get('image');?>" class="single__image thumbnail">
+            <img src="<?php echo CFS()->get('image');?>"  alt="<?php the_title(); ?>" class="single__image thumbnail">
           </figure>
   
           <!-- サイトタイトルとリンク -->

@@ -43,7 +43,7 @@
               <li class="works__item">
                 <a href="<?php the_permalink(); ?>">
                   <figure class="works__item-image-wrapper">
-                    <img src="<?php echo CFS()->get('image');?>" class="works__item-image thumbnail">
+                    <img src="<?php echo CFS()->get('image');?>" class="works__item-image thumbnail" alt="<?php the_title(); ?>" loading="lazy">
                   </figure>
                 </a>
   
@@ -95,7 +95,7 @@
               <?php if($query -> have_posts()) : ?> 
               <?php while($query -> have_posts()) : $query -> the_post(); ?> 
                 <li class="slider-item">
-                  <img src="<?php echo CFS()->get('image');?>" class="works__item-image thumbnail">
+                  <img src="<?php echo CFS()->get('image');?>" class="works__item-image thumbnail" alt="<?php the_title(); ?>" loading="lazy">
                 </li>
 
               <?php endwhile; ?>
@@ -140,7 +140,7 @@
               <?php if($query -> have_posts()) : ?> 
               <?php while($query -> have_posts()) : $query -> the_post(); ?> 
                 <li class="slider-item">
-                  <img src="<?php echo CFS()->get('banner');?>" class="works__item-image thumbnail">
+                  <img src="<?php echo CFS()->get('banner');?>" class="works__item-image thumbnail" alt="<?php the_title(); ?>" loading="lazy">
                 </li>
 
               <?php endwhile; ?>
@@ -162,7 +162,7 @@
           
           <div class="blog-banner">
             <a href="https://kbyt-programming.com/" target="_blank" rel="noopener noreferrer">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/blog-image.png" alt="" class="thumbnail">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/blog-image.png" alt="うぇぶのーと" class="thumbnail">
             </a>
             <p class="click-open">外部サイトに移行します</p>
           </div>
@@ -212,32 +212,32 @@
 
             <div class="skills-container flex">
               <ul class="skill-set-list">
-                <li class="skill-set-list__name"><span style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/icon/html&css-icon.png);" class="skill-set-list__image"></span>HTML / CSS</li>
+                <li class="skill-set-list__name"><span style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/icon/html&css-icon.png);" class="skill-set-list__image" alt="HTML / CSS"></span>HTML / CSS</li>
                 <li class="skill-set-list__explain">HTMLやCSSでのマークアップだけでなくSassを使用した記述も基本的な部分はできます。<br>またレスポンシブデザインへの対応も可能です。<br>エディターはVisual Studio Codeを使用しています。</li>
               </ul>
       
               <ul class="skill-set-list">
-                <li class="skill-set-list__name"><span style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/icon/javascript_icon.png);" class="skill-set-list__image"></span>Java Script / jQuery</li>
+                <li class="skill-set-list__name"><span style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/icon/javascript_icon.png);" class="skill-set-list__image" alt="Java Script / jQuery"></span>Java Script / jQuery</li>
                 <li class="skill-set-list__explain">基本的な文法は一通り学習しましたので簡単なJavaScriptやjQueryを扱いWebサイトに動きをつけることができます。<br>あまりにも複雑なものは調べながらやるので時間がかかるかもしれません。</li>
               </ul>
       
               <ul class="skill-set-list">
-                <li class="skill-set-list__name"><span style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/icon/xd_icon.png);" class="skill-set-list__image"></span>Adobe XD</li>
+                <li class="skill-set-list__name"><span style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/icon/xd_icon.png);" class="skill-set-list__image" alt="Adobe XD"></span>Adobe XD</li>
                 <li class="skill-set-list__explain">自身のWebサイトを作成する場合はXDでワイヤーフレームを作成してコーディングをしていますので基本的な使用はできます。</li>
               </ul>
       
               <ul class="skill-set-list">
-                <li class="skill-set-list__name"><span style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/icon/wordpress_icon.png);" class="skill-set-list__image"></span>Word Press</li>
+                <li class="skill-set-list__name"><span style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/icon/wordpress_icon.png);" class="skill-set-list__image" alt="Word Press"></span>Word Press</li>
                 <li class="skill-set-list__explain">HTMLで作成したサイトをWord Press化し、更新、管理がしやすいようにすることができます。<br>また個人的なブログもWord Pressで運営しておりますので記事の更新や仕様には慣れております。</li>
               </ul>
     
               <ul class="skill-set-list">
-                <li class="skill-set-list__name"><span style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/icon/photoshop-icon.png);" class="skill-set-list__image"></span>Photoshop</li>
+                <li class="skill-set-list__name"><span style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/icon/photoshop-icon.png);" class="skill-set-list__image" alt="Photoshop"></span>Photoshop</li>
                 <li class="skill-set-list__explain">基本的な操作は一通りでき、画像の修正や編集、合成などができます。</li>
               </ul>
     
               <ul class="skill-set-list">
-                <li class="skill-set-list__name"><span style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/icon/illustrator_icon.png);" class="skill-set-list__image"></span>illustrator</li>
+                <li class="skill-set-list__name"><span style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/icon/illustrator_icon.png);" class="skill-set-list__image" alt="illustrator"></span>illustrator</li>
                 <li class="skill-set-list__explain">illustratorはまだまだ学習中ですが基本的な操作は可能です。</li>
               </ul>
             </div>
