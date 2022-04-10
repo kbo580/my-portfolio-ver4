@@ -127,6 +127,9 @@ jQuery(function($){
 
 
   //「topへ戻る」関連
+
+  $('#page-top').hide();
+
   //メインビジュアルの高さを取得して変数にする
   var mvHight = $('.mv').outerHeight(true);
   $(window).scroll(function(){

@@ -1,5 +1,5 @@
 <footer>
-    <p class="copy">&copy;2022 Yuta Kobayashi</p>
+    <p class="copy">&copy;<?php echo date('Y')?> Yuta Kobayashi</p>
 
     <div id="page-top" class="page-top">
       <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/to-top.png" alt="topへ戻るボタン"></a>

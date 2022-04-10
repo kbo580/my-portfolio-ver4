@@ -14,58 +14,82 @@
 
         <div class="single__contents-wrapper inner">
 
+          <!-- タイトル --> 
           <h3 class="single__article-title"><?php the_title()?></h3>
 
+          <!-- サムネイル -->
           <figure class="single__image-wrapper">
             <img src="<?php echo CFS()->get('image');?>" class="single__image thumbnail">
           </figure>
   
+          <!-- サイトタイトルとリンク -->
           <ul class="single__list">
             <li class="single__list-title">サイト名</li>
             <li class="single__list-content"><a href="#"><?php echo CFS()->get('url');?></a></li>
+            <li class="site-pass">※BASIC認証をかけてあります。<br>お手数ですがid"<?php echo CFS()->get('id');?>", パスワード"<?php echo CFS()->get('pass');?>"を入力してご覧ください</li>
           </ul>
 
+          <!-- サイトの構成 -->
           <ul class="single__list">
             <li class="single__list-title">サイト構成</li>
             <li class="single__list-content"><?php echo CFS()->get('structure');?></li>
           </ul>
   
+          <!-- 使用ツールや言語 -->
           <ul class="single__list">
             <li class="single__list-title">作成ツールなど</li>
             <li class="single__list-content"><?php echo CFS()->get('tools');?></li>
           </ul>
 
+          <!-- 製作期間 -->
           <ul class="single__list">
             <li class="single__list-title">制作期間</li>
             <li class="single__list-content"><?php echo CFS()->get('period');?></li>
           </ul>
 
+          <!-- サイト製作の概要 -->
           <ul class="single__list">
             <li class="single__list-title">サイト製作の概要</li>
             <li class="single__list-content"><?php echo CFS()->get('about-works');?></li>
           </ul>
-
+          
+          <!-- ターゲットの基本情報 -->
+          <ul class="single__list custom-list-wrapper">
+            <li class="single__list-title">ターゲットの基本情報</li>
+            <?php
+                $fields = $cfs->get('info-list'); 
+                foreach ((array)$fields as $field) :
+                  ?>
+            <li class="single__list-content single__point">
+              <?php echo $field['info']; ?>
+            </li>
+            <?php endforeach; ?>
+          </ul>
+          
+          <!-- ゴール -->
           <ul class="single__list">
             <li class="single__list-title">ゴール</li>
             <li class="single__list-content"><?php echo CFS()->get('goal');?></li>
           </ul>
-
-          <ul class="single__list point-wrapper">
-            <li class="single__list-title">サイト製作のポイントなど</li>
-              <?php
+          
+          <!-- ゴールまでのポイント -->
+          <ul class="single__list custom-list-wrapper works-comments">
+            <li class="single__list-title">ゴールまでのポイント</li>
+            <?php
                 $fields = $cfs->get('point-list'); 
                 foreach ((array)$fields as $field) :
-                ?>
-                <li class="single__list-content single__point">
-                  <?php echo $field['point']; ?>
-                </li>
-                <?php endforeach; ?>
+                  ?>
+            <li class="single__list-content single__point">
+              <?php echo $field['point']; ?>
+            </li>
+            <?php endforeach; ?>
           </ul>
-        
-          <ul class="single__list works-comments">
+          
+          <!-- 注釈、一言 -->
+          <!-- <ul class="single__list works-comments">
             <li class="single__list-title">注釈、一言</li>
             <li class="single__list-content"><?php echo CFS()->get('word');?></li>
-          </ul>
+          </ul> -->
 
           <div class="single__site-image-wrapper">
   
