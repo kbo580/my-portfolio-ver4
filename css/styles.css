@@ -1807,13 +1807,25 @@ span.wpcf7-not-valid-tip::before {
 
 .banners__image-wrapper {
   aspect-ratio: 6 / 5;
-  margin-bottom: 16px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
   -webkit-transition: all .4s;
   transition: all .4s;
+  margin-bottom: 16px;
+  border: 1px solid #dfdfdf;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
 .banners__image-wrapper:hover {
   opacity: .8;
+}
+
+.banners__item-image {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /*モーダル*/

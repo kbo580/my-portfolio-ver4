@@ -18,7 +18,7 @@
             <li class="banners__item">
               <a href="#">
                 <figure class="banners__image-wrapper">
-                  <img src="<?php echo CFS()->get('banner');?>" alt="<?php the_title()?>" class="banner__item-image thumbnail">
+                  <img src="<?php echo CFS()->get('banner');?>" alt="<?php the_title()?>" class="banners__item-image">
                 </figure>
               </a>
 
@@ -37,12 +37,14 @@
           <div class="modal-wrapper" id="modal-wrapper">
             <div class="close" id="close"></div>
             
+            
             <div id="modal-image-wrapper" class="modal-image-wrapper">
               <img src="" alt="">  
             </div>
           </div>
           <!-- /モーダル -->
 
+          <!-- ページャー -->
           <?php
           $args = array(
             'mid_size' => 1, /* 現在のページの左右に表示するページ数 */
