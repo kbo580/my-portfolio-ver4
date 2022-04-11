@@ -852,6 +852,8 @@ body.active{
   position: relative;
   height: 100%;
   width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  background-color: #fff;
 }
 
 .slider-item{
@@ -1869,6 +1871,7 @@ span.wpcf7-not-valid-tip {
 
   &__item-image{
     height: 100%;
+    width: 100%;
     object-fit: contain;
   }
 

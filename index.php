@@ -140,7 +140,7 @@
               <?php if($query -> have_posts()) : ?> 
               <?php while($query -> have_posts()) : $query -> the_post(); ?> 
                 <li class="slider-item">
-                  <img src="<?php echo CFS()->get('banner');?>" class="works__item-image thumbnail" alt="<?php the_title(); ?>" loading="lazy">
+                  <img src="<?php echo CFS()->get('banner');?>" class="works__item-image banners__item-image" alt="<?php the_title(); ?>" loading="lazy">
                 </li>
 
               <?php endwhile; ?>
