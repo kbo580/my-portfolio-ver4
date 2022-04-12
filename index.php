@@ -213,7 +213,7 @@
             <div class="skills-container flex">
               <ul class="skill-set-list">
                 <li class="skill-set-list__name"><span style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/icon/html&css-icon.png);" class="skill-set-list__image" alt="HTML / CSS"></span>HTML / CSS</li>
-                <li class="skill-set-list__explain">HTMLやCSSでのマークアップだけでなくSassを使用した記述も基本的な部分はできます。<br>またレスポンシブデザインへの対応も可能です。<br>エディターはVisual Studio Codeを使用しています。</li>
+                <li class="skill-set-list__explain">基本的なHTMLやCSSでのマークアップはできます。CSSはSassを使用した記述でコーディングできます。<br>またレスポンシブデザインへの対応も可能です。<br>エディターはVisual Studio Codeを使用しています。</li>
               </ul>
       
               <ul class="skill-set-list">
