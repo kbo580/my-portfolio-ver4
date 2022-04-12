@@ -44,18 +44,6 @@
           </div>
           <!-- /モーダル -->
 
-          <!-- ページャー -->
-          <?php
-          $args = array(
-            'mid_size' => 1, /* 現在のページの左右に表示するページ数 */
-            'prev_text' => '<i class="fa-solid fa-angle-left"></i>PREV',
-            'next_text' => 'NEXT<i class="fa-solid fa-angle-right"></i>', 
-            'screen_reader_text' => ' ',
-          );
-
-          the_posts_pagination($args);
-          ?>
-
         </div>
         <!-- /works__wrapper inner -->
         
